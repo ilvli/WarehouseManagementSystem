@@ -12,6 +12,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WarehouseManagementSystem1.Input_Information;
 
 namespace WarehouseManagementSystem1
 {
@@ -20,9 +21,44 @@ namespace WarehouseManagementSystem1
     /// </summary>
     public partial class MainWindow : Window
     {
+        //public MainWindow()
+        //{
+        //    InitializeComponent();
+        //}
         public MainWindow()
         {
             InitializeComponent();
+            //设置窗口初始位置
+            this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterScreen;
+            this.SourceInitialized += MainWindow_SourceInitialized;
         }
+        //显示登录窗口
+        void MainWindow_SourceInitialized(object sender, System.EventArgs e)
+        {
+            LoginWindow login = new LoginWindow();
+            login.ShowDialog();
+            this.Title = "欢迎您，" + login.UserName;
+        }
+
+        //判断按钮
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            Window w = null;
+            switch (btn.Content.ToString())
+            {
+                case "录入":
+                    w = new InputMainWindow(); break;
+                case "退出": App.Current.Shutdown(); break;
+            }
+            if (w != null)
+            {
+                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                w.Owner = this;
+                w.ShowDialog();
+            }
+        }
+
+     
     }
 }

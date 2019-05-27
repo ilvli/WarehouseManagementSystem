@@ -5,8 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="仓库管理系统" Height="400" Width="700">
     <Grid>
-        
+        <Button Content="录入" HorizontalAlignment="Left" Margin="250,61,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20" Click="Button_Click"/>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="250,134,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20" />
+        <Button Content="统计" HorizontalAlignment="Left" Margin="250,207,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold"/>
+        <Button Content="退出" HorizontalAlignment="Left" Margin="250,278,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+
     </Grid>
 </Window>
