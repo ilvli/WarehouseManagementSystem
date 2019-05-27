@@ -58,6 +58,18 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Input_Information\Material_Information_Input_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Input_Information\Merchant_Information_Input_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Input_Information\Product_Information_Input_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="LoginWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -72,6 +84,15 @@
     </Compile>
     <Compile Include="Input_Information\InputMainWindow.xaml.cs">
       <DependentUpon>InputMainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Information\Material_Information_Input_Window.xaml.cs">
+      <DependentUpon>Material_Information_Input_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Information\Merchant_Information_Input_Window.xaml.cs">
+      <DependentUpon>Merchant_Information_Input_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Information\Product_Information_Input_Window.xaml.cs">
+      <DependentUpon>Product_Information_Input_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="LoginWindow.xaml.cs">
       <DependentUpon>LoginWindow.xaml</DependentUpon>

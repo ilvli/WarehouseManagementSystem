@@ -5,12 +5,12 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Input_Information"
         mc:Ignorable="d"
-        Title="InputMainWindow" Height="400" Width="700">
+        Title="仓库管理系统" Height="400" Width="700">
     <Grid>
         <Label Content="录入信息" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Height="37" Width="90" FontSize="20" FontWeight="Bold"/>
-        <Button Content="原料" HorizontalAlignment="Left" Margin="250,74,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold"/>
-        <Button Content="产品" HorizontalAlignment="Left" Margin="250,136,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20"/>
-        <Button Content="商家" HorizontalAlignment="Left" Margin="250,201,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold"/>
-        <Button Content="返回" HorizontalAlignment="Left" Margin="250,269,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20" Click="Button_Click"/>
+        <Button Content="原料" HorizontalAlignment="Left" Margin="250,70,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="产品" HorizontalAlignment="Left" Margin="250,140,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20" Click="Button_Click"/>
+        <Button Content="商家" HorizontalAlignment="Left" Margin="250,210,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20" Click="Button_Click"/>
     </Grid>
 </Window>

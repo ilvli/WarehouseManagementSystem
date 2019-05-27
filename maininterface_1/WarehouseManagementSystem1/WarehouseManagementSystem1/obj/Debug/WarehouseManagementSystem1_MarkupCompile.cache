@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 D:\GitHub\WarehouseManagementSystem\maininterface_1\WarehouseManagementSystem1\WarehouseManagementSystem1\App.xaml
-3-2011325348
+6-850614963
 
-71270666031
+102123657924
 131569487696
-Input_Information\InputMainWindow.xaml;LoginWindow.xaml;MainWindow.xaml;
+Input_Information\InputMainWindow.xaml;Input_Information\Material_Information_Input_Window.xaml;Input_Information\Merchant_Information_Input_Window.xaml;Input_Information\Product_Information_Input_Window.xaml;LoginWindow.xaml;MainWindow.xaml;
 
 False
 

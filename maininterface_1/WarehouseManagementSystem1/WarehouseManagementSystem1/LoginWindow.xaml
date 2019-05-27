@@ -9,7 +9,7 @@
     <Grid>
         <Button Content="登录" HorizontalAlignment="Left" Margin="197,235,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click" RenderTransformOrigin="0.422,1.73" Height="33" FontWeight="Bold" FontSize="16"/>
         <Button Content="退出" HorizontalAlignment="Left" Margin="411,235,0,0" VerticalAlignment="Top" Width="105" Click="Button_Click" Height="33" FontWeight="Bold" FontSize="16"/>
-        <Label Content="账户：" HorizontalAlignment="Left" Margin="197,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Height="27" Margin="247,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="269" FontSize="16" />
+        <Label Content="账户：" HorizontalAlignment="Left" Margin="221,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Height="27" Margin="271,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" FontSize="16" />
     </Grid>
 </Window>

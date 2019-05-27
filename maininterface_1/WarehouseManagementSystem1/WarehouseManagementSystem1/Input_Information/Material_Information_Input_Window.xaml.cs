@@ -15,11 +15,11 @@ using System.Windows.Shapes;
 namespace WarehouseManagementSystem1.Input_Information
 {
     /// <summary>
-    /// InputMainWindow.xaml 的交互逻辑
+    /// Material_Information_Input_Window.xaml 的交互逻辑
     /// </summary>
-    public partial class InputMainWindow : Window
+    public partial class Material_Information_Input_Window : Window
     {
-        public InputMainWindow()
+        public Material_Information_Input_Window()
         {
             InitializeComponent();
         }
@@ -27,20 +27,17 @@ namespace WarehouseManagementSystem1.Input_Information
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
-            Window w = null;
             switch (btn.Content.ToString())
             {
-                case "原料": w = new Material_Information_Input_Window(); break;
-                case "产品": w = new Product_Information_Input_Window(); break;
-                case "商家": w = new Merchant_Information_Input_Window(); break;
+
                 case "返回": this.Close(); break;
             }
-            if (w != null)
-            {
-                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
-                w.Owner = this;
-                w.ShowDialog();
-            }
+            //if (w != null)
+            //{
+            //    w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+            //    w.Owner = this;
+            //    w.ShowDialog();
+            //}
         }
     }
 }
