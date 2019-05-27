@@ -1,7 +1,7 @@
 # WarehouseManagementSystem
 数据结构程序设计c类题。搭建一个仓库管理系统。
 
-打算使用 C# 加 MySQL 来做。
+打算使用 C# 的 WPF 加 MySQL 来做。
 
 #### 下面是软件构思的草图
 
