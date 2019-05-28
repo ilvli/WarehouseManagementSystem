@@ -54,6 +54,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Page Include="Information_Inquiry\Information_Inquiry_Main_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Inquiry\Material_Inquiry_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Inquiry\Merchant_Inquiry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Inquiry\Product_Information_Inquiry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Statistics\Information_Statistics_Main_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Statistics\Material_Information_Statistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Statistics\Product_Information_Statistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Input_Information\InputMainWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -81,6 +109,27 @@
     <Compile Include="App.xaml.cs">
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Information_Inquiry\Information_Inquiry_Main_Window.xaml.cs">
+      <DependentUpon>Information_Inquiry_Main_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Inquiry\Material_Inquiry_Window.xaml.cs">
+      <DependentUpon>Material_Inquiry_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Inquiry\Merchant_Inquiry.xaml.cs">
+      <DependentUpon>Merchant_Inquiry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Inquiry\Product_Information_Inquiry.xaml.cs">
+      <DependentUpon>Product_Information_Inquiry.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Statistics\Information_Statistics_Main_Window.xaml.cs">
+      <DependentUpon>Information_Statistics_Main_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Statistics\Material_Information_Statistics.xaml.cs">
+      <DependentUpon>Material_Information_Statistics.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Statistics\Product_Information_Statistics.xaml.cs">
+      <DependentUpon>Product_Information_Statistics.xaml</DependentUpon>
     </Compile>
     <Compile Include="Input_Information\InputMainWindow.xaml.cs">
       <DependentUpon>InputMainWindow.xaml</DependentUpon>
@@ -128,5 +177,6 @@
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

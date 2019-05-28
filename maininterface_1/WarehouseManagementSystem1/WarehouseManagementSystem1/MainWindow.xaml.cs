@@ -13,6 +13,8 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using WarehouseManagementSystem1.Input_Information;
+using WarehouseManagementSystem1.Information_Inquiry;
+using WarehouseManagementSystem1.Information_Statistics;
 
 namespace WarehouseManagementSystem1
 {
@@ -49,6 +51,10 @@ namespace WarehouseManagementSystem1
             {
                 case "录入":
                     w = new InputMainWindow(); break;
+                case "查询":
+                    w = new Information_Inquiry_Main_Window();break;
+                case "统计":
+                    w = new Information_Statistics_Main_Window();break;
                 case "退出": App.Current.Shutdown(); break;
             }
             if (w != null)

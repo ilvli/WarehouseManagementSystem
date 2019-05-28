@@ -1,0 +1,16 @@
+﻿<Window x:Class="WarehouseManagementSystem1.Information_Inquiry.Information_Inquiry_Main_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        Title="Information_Inquiry_Main_Window" Height="400" Width="700">
+    <Grid>
+        <Label Content="信息查询" HorizontalAlignment="Left" Margin="300,0,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Button Content="原料查询" HorizontalAlignment="Left" Margin="250,70,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Height="40" Click="Button_Click"/>
+        <Button Content="产品查询" HorizontalAlignment="Left" Margin="250,140,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="商家查询" HorizontalAlignment="Left" Margin="250,210,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+
+    </Grid>
+</Window>
