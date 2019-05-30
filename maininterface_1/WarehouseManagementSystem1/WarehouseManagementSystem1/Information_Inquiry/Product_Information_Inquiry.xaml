@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="Product_Information_Inquiry" Height="400" Width="700">
+        Title="产品信息查询" Height="400" Width="700">
     <Grid>
         <Label Content="请输入起始日期" HorizontalAlignment="Left" Margin="177,100,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Label Content="请输入终止日期" HorizontalAlignment="Left" Margin="177,170,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>

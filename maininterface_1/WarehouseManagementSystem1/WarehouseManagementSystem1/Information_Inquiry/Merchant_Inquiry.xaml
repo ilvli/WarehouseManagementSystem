@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="Merchant_Inquiry" Height="400" Width="700">
+        Title="商家信息查询" Height="400" Width="700">
     <Grid>
         <Label Content="商家信息查询" HorizontalAlignment="Left" Margin="283,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Button Content="供货商家" HorizontalAlignment="Left" Margin="250,90,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold"/>

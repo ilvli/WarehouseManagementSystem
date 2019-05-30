@@ -33,8 +33,15 @@ namespace WarehouseManagementSystem1
             switch (btn.Content.ToString())
             {
                 case "登录":
-                    this.UserName = userNameTextBox.Text;
-                    this.Close();
+                    if (PasswordTextBox.Password == "123456")
+                    {
+                        this.UserName = userNameTextBox.Text;
+                        this.Close();
+                    }
+                    else
+                    {
+                        MessageBoxResult result = MessageBox.Show("这里是消息内容", "这是标题", MessageBoxButton.OK);
+                    }
                     break;
                 case "退出": App.Current.Shutdown(); break;
             }
