@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Input_Information"
         mc:Ignorable="d"
-        Title="仓库管理系统" Height="400" Width="700">
+        Title="录入信息" Height="400" Width="700">
     <Grid>
         <Label Content="录入信息" HorizontalAlignment="Left" Margin="305,10,0,0" VerticalAlignment="Top" Height="37" Width="90" FontSize="20" FontWeight="Bold"/>
         <Button Content="原料" HorizontalAlignment="Left" Margin="250,70,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>

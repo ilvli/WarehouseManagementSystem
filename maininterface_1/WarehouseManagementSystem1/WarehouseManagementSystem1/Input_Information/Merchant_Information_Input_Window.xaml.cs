@@ -27,10 +27,18 @@ namespace WarehouseManagementSystem1.Input_Information
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
+            Window w = null;
             switch (btn.Content.ToString())
             {
-
+                case "供货商家":w = new Sipplier_Window();break;
+                case "收货商家":w = new Receiving_Merchant_Window();break;
                 case "返回": this.Close(); break;
+            }
+            if (w != null)
+            {
+                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                w.Owner = this;
+                w.ShowDialog();
             }
         }
     }

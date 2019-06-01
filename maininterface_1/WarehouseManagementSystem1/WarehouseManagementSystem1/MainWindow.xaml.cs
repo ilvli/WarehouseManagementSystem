@@ -15,6 +15,7 @@ using System.Windows.Shapes;
 using WarehouseManagementSystem1.Input_Information;
 using WarehouseManagementSystem1.Information_Inquiry;
 using WarehouseManagementSystem1.Information_Statistics;
+using System.Data.SQLite;
 
 namespace WarehouseManagementSystem1
 {
@@ -23,10 +24,6 @@ namespace WarehouseManagementSystem1
     /// </summary>
     public partial class MainWindow : Window
     {
-        //public MainWindow()
-        //{
-        //    InitializeComponent();
-        //}
         public MainWindow()
         {
             InitializeComponent();

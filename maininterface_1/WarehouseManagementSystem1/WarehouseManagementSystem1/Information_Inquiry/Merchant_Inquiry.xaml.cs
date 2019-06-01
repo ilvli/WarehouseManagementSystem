@@ -27,10 +27,24 @@ namespace WarehouseManagementSystem1.Information_Inquiry
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
+            Window w = null;
             switch (btn.Content.ToString())
             {
                 case "返回": this.Close(); break;
+                case "供货商家":w = new Supplier_Information();break;
+                case "收货商家": w = new Receiving_Merchant_Information(); break;
+            }
+            if (w != null)
+            {
+                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                w.Owner = this;
+                w.ShowDialog();
             }
         }
+    }
+    public class MerchantMessage
+    {
+        public string Name { get; set; }
+        public string Remark { get; set; }
     }
 }

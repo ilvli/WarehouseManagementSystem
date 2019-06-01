@@ -31,7 +31,7 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             switch (btn.Content.ToString())
             {
                 case "原料查询":
-                    w = new Material_Inquiry_Window();
+                    w = new Material_Type_Window();
                     break;
                 case "产品查询":
                     w = new Product_Information_Inquiry();

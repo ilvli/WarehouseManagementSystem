@@ -1,0 +1,23 @@
+﻿<Window x:Class="WarehouseManagementSystem1.Information_Inquiry.Receiving_Merchant_Information"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
+        mc:Ignorable="d"
+        Title="收货商家信息列表" Height="450" Width="800" Loaded="LoadData">
+    <Grid>
+        <DataGrid Name="Supplier_message" HorizontalAlignment="Left" AutoGenerateColumns="False">
+            <!--使header居中-->
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Name}" Header="收货商称呼" Width="300" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Remark}" Header="其他信息" Width="*" FontSize="16"/>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
+</Window>

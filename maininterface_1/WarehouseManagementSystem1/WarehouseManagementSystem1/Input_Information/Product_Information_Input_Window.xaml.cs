@@ -27,10 +27,17 @@ namespace WarehouseManagementSystem1.Input_Information
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
+            Window w = null;
             switch (btn.Content.ToString())
             {
-
+                case "确定": break;
                 case "取消": this.Close(); break;
+            }
+            if (w != null)
+            {
+                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                w.Owner = this;
+                w.ShowDialog();
             }
         }
     }

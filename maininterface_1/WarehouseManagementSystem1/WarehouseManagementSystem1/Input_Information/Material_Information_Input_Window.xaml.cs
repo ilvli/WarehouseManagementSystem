@@ -27,17 +27,19 @@ namespace WarehouseManagementSystem1.Input_Information
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
+            Window w = null;
             switch (btn.Content.ToString())
             {
-
+                case "长丝/氨纶":w = new ChangsiAnlun_Window(); break;
+                case "纸箱/纸管/塑料袋":w = new Zhixiang_Window(); break;
                 case "返回": this.Close(); break;
             }
-            //if (w != null)
-            //{
-            //    w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
-            //    w.Owner = this;
-            //    w.ShowDialog();
-            //}
+            if (w != null)
+            {
+                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                w.Owner = this;
+                w.ShowDialog();
+            }
         }
     }
 }

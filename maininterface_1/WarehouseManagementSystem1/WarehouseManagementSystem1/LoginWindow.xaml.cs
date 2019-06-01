@@ -40,7 +40,7 @@ namespace WarehouseManagementSystem1
                     }
                     else
                     {
-                        MessageBoxResult result = MessageBox.Show("这里是消息内容", "这是标题", MessageBoxButton.OK);
+                        MessageBoxResult result = MessageBox.Show("密码输入错误！", "提醒", MessageBoxButton.OK);
                     }
                     break;
                 case "退出": App.Current.Shutdown(); break;

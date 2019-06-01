@@ -72,6 +72,34 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Information_Inquiry\Material_Type_Window.xaml.cs">
+      <DependentUpon>Material_Type_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Inquiry\Material_Window.xaml.cs">
+      <DependentUpon>Material_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Inquiry\Product_Window.xaml.cs">
+      <DependentUpon>Product_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Inquiry\Receiving_Merchant_Information.xaml.cs">
+      <DependentUpon>Receiving_Merchant_Information.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Inquiry\Supplier_Information.xaml.cs">
+      <DependentUpon>Supplier_Information.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Information\ChangsiAnlun_Window.xaml.cs">
+      <DependentUpon>ChangsiAnlun_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Information\Receiving_Merchant_Window.xaml.cs">
+      <DependentUpon>Receiving_Merchant_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Information\Sipplier_Window.xaml.cs">
+      <DependentUpon>Sipplier_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Input_Information\Zhixiang_Window.xaml.cs">
+      <DependentUpon>Zhixiang_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Sqlite_Operate_Function.cs" />
     <Page Include="Information_Inquiry\Information_Inquiry_Main_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -80,11 +108,31 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Information_Inquiry\Material_Type_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Inquiry\Material_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Information_Inquiry\Merchant_Inquiry.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Information_Inquiry\Product_Information_Inquiry.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Inquiry\Product_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Inquiry\Receiving_Merchant_Information.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Inquiry\Supplier_Information.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -97,6 +145,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Information_Statistics\Product_Information_Statistics.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Input_Information\ChangsiAnlun_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -113,6 +165,18 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Input_Information\Product_Information_Input_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Input_Information\Receiving_Merchant_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Input_Information\Sipplier_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Input_Information\Zhixiang_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
