@@ -15,27 +15,22 @@ using System.Windows.Shapes;
 namespace WarehouseManagementSystem1.Information_Statistics
 {
     /// <summary>
-    /// Information_Statistics_Main_Window.xaml 的交互逻辑
+    /// Material_Type_Sta_Window.xaml 的交互逻辑
     /// </summary>
-    public partial class Information_Statistics_Main_Window : Window
+    public partial class Material_Type_Sta_Window : Window
     {
-        public Information_Statistics_Main_Window()
+        public Material_Type_Sta_Window()
         {
             InitializeComponent();
         }
-
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
             Window w = null;
             switch (btn.Content.ToString())
             {
-                case "产品":
-                    w = new Product_Information_Statistics();
-                    break;
-                case "原料":
-                    w = new Material_Type_Sta_Window();
-                    break;
+                case "长丝/氨纶": w = new Material_Information_Statistics(); break;
+                case "纸箱/纸管/塑料袋": w = new ZhiXiang_Window(); break;
                 case "返回": this.Close(); break;
             }
             if (w != null)
@@ -46,9 +41,5 @@ namespace WarehouseManagementSystem1.Information_Statistics
             }
         }
     }
-    public class ComboBoxValue
-    {
-        public string Name { get; set; }
-        public string Value { get; set; }
-    }
+    
 }
