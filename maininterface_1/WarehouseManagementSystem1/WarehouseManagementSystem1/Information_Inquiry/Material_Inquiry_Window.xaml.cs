@@ -31,7 +31,7 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             switch (btn.Content.ToString())
             {
                 case "取消": this.Close(); break;
-                case "查询":w = new Material_Window();break;
+                case "查询":w = new ChangsiResult_Window();break;
             }
             if (w != null)
             {

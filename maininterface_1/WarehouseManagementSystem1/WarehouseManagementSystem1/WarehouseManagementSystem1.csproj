@@ -72,11 +72,11 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Information_Inquiry\ChangsiResult_Window.xaml.cs">
+      <DependentUpon>ChangsiResult_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Information_Inquiry\Material_Type_Window.xaml.cs">
       <DependentUpon>Material_Type_Window.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="Information_Inquiry\Material_Window.xaml.cs">
-      <DependentUpon>Material_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Information_Inquiry\Product_Window.xaml.cs">
       <DependentUpon>Product_Window.xaml</DependentUpon>
@@ -87,8 +87,17 @@
     <Compile Include="Information_Inquiry\Supplier_Information.xaml.cs">
       <DependentUpon>Supplier_Information.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Information_Inquiry\Zhixiang_result.xaml.cs">
+      <DependentUpon>Zhixiang_result.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Statistics\ChangsiResult_Window.xaml.cs">
+      <DependentUpon>ChangsiResult_Window.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Information_Statistics\Material_Type_Sta_Window.xaml.cs">
       <DependentUpon>Material_Type_Sta_Window.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Information_Statistics\ProductResult_Window.xaml.cs">
+      <DependentUpon>ProductResult_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Information_Statistics\ZhixiangResult_Window.xaml.cs">
       <DependentUpon>ZhixiangResult_Window.xaml</DependentUpon>
@@ -109,6 +118,10 @@
       <DependentUpon>Zhixiang_Window.xaml</DependentUpon>
     </Compile>
     <Compile Include="Sqlite_Operate_Function.cs" />
+    <Page Include="Information_Inquiry\ChangsiResult_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Information_Inquiry\Information_Inquiry_Main_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -118,10 +131,6 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Information_Inquiry\Material_Type_Window.xaml">
-      <SubType>Designer</SubType>
-      <Generator>MSBuild:Compile</Generator>
-    </Page>
-    <Page Include="Information_Inquiry\Material_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -145,6 +154,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Information_Inquiry\Zhixiang_result.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Statistics\ChangsiResult_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Information_Statistics\Information_Statistics_Main_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -154,6 +171,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Information_Statistics\Material_Type_Sta_Window.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Information_Statistics\ProductResult_Window.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

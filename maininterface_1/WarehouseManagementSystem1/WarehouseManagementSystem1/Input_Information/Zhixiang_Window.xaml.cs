@@ -20,9 +20,34 @@ namespace WarehouseManagementSystem1.Input_Information
     /// </summary>
     public partial class Zhixiang_Window : Window
     {
+        ObservableCollection<TypeValue> TypeBoxValue = new ObservableCollection<TypeValue>();
+
         public Zhixiang_Window()
         {
             InitializeComponent();
+
+            //设置种类下拉栏
+            TypeCombo.ItemsSource = TypeBoxValue;
+            TypeCombo.DisplayMemberPath = "Name";
+            TypeCombo.SelectedValuePath = "Value";
+        }
+        private void LoadData(object sender, RoutedEventArgs e)
+        {
+            TypeBoxValue.Add(new TypeValue()
+            {
+                Name = "纸箱",
+                Value = "纸箱"
+            });
+            TypeBoxValue.Add(new TypeValue()
+            {
+                Name = "纸管",
+                Value = "纸管"
+            });
+            TypeBoxValue.Add(new TypeValue()
+            {
+                Name = "塑料袋",
+                Value = "塑料袋"
+            });
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -41,5 +66,10 @@ namespace WarehouseManagementSystem1.Input_Information
                 w.ShowDialog();
             }
         }
+    }
+    public class TypeValue
+    {
+        public string Name { get; set; }
+        public string Value { get; set; }
     }
 }

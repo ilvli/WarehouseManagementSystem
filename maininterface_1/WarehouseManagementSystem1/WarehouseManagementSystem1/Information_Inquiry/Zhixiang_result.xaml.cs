@@ -16,47 +16,48 @@ using System.Windows.Shapes;
 namespace WarehouseManagementSystem1.Information_Inquiry
 {
     /// <summary>
-    /// Material_Window.xaml 的交互逻辑
+    /// Zhixiang_result.xaml 的交互逻辑
     /// </summary>
-    public partial class Material_Window : Window
+    public partial class Zhixiang_result : Window
     {
-        ObservableCollection<MaterialMessage> materialData = new ObservableCollection<MaterialMessage>();
-        public Material_Window()
+        ObservableCollection<ZhixiangMessage> ZhixiangData = new ObservableCollection<ZhixiangMessage>();
+        public Zhixiang_result()
         {
             InitializeComponent();
         }
         private void LoadData(object sender, RoutedEventArgs e)
         {
-            materialData.Add(new MaterialMessage()
+            ZhixiangData.Add(new ZhixiangMessage()
             {
-                Data="2019-2-12",
-                Type="长丝",
-                Model="A802",
-                Weight=24.4,
-                Color="大红",
-                Name="宝莎"
+                Data = "2019-2-12",
+                Type = "长丝",
+                Number = 43,
+                UnitPrice = 24.4,
+                Name = "宝莎",
+                Count = 432.5
             });
-            materialData.Add(new MaterialMessage()
+            ZhixiangData.Add(new ZhixiangMessage()
             {
                 Data = "2019-5-12",
                 Type = "氨纶",
-                Model = "A802",
-                Weight = 29.2,
-                Color = "黑",
-                Name = "宝莎"
+                Number = 65,
+                UnitPrice = 29.2,
+                Name = "宝莎",
+                Count = 5435.1
             });
 
-            Material_message.ItemsSource = materialData;
-            //((this.FindName("DATA_GRID")) as DataGrid).ItemsSource = merchantData;
+            Material_message.ItemsSource = ZhixiangData;
         }
     }
-    public class MaterialMessage
+
+    
+    public class ZhixiangMessage
     {
         public string Data { get; set; }//收货日期
         public string Type { get; set; }//只有长丝/氨纶两种
-        public string Model { get; set; }//类型
-        public double Weight { get; set; }
-        public string Color { get; set; }
+        public int Number { get; set; }//个数
+        public double UnitPrice { get; set; }   //单价
         public string Name { get; set; }//供货商家
+        public double Count { get; set; }//总价
     }
 }

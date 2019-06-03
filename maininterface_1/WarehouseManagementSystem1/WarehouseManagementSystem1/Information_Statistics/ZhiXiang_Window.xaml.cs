@@ -71,6 +71,7 @@ namespace WarehouseManagementSystem1.Information_Statistics
             switch (btn.Content.ToString())
             {
                 case "确定":
+                    w = new ZhixiangResult_Window();
                     string combostr = TypeCombo.SelectedValue.ToString()+"\n"+SiplierCombo.SelectedValue.ToString();
                     MessageBoxResult result = MessageBox.Show(combostr, "下拉栏选择的信息", MessageBoxButton.OK);
                     break;

@@ -87,13 +87,20 @@ namespace WarehouseManagementSystem1.Information_Statistics
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
+            Window w = null;
             switch (btn.Content.ToString()){
                 case "确定":
+                    w = new ProductResult_Window();
                     string combostr = ReveivingMerchantCombo.SelectedValue.ToString()+"\n"+TypeCombo.SelectedValue.ToString() + "\n" + ColorCombo.SelectedValue.ToString();
                     MessageBoxResult result = MessageBox.Show(combostr, "下拉栏选择的信息", MessageBoxButton.OK);
                     break; 
                 case "取消": this.Close(); break;
-
+            }
+            if (w != null)
+            {
+                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                w.Owner = this;
+                w.ShowDialog();
             }
         }
     }

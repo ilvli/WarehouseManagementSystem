@@ -1,13 +1,13 @@
-﻿<Window x:Class="WarehouseManagementSystem1.Information_Inquiry.Product_Window"
+﻿<Window x:Class="WarehouseManagementSystem1.Information_Statistics.ChangsiResult_Window"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
-        xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
+        xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Statistics"
         mc:Ignorable="d"
-        Title="产品查询结果" Height="450" Width="800" Loaded="LoadData">
+        Title="ChangsiResult_Window" Height="450" Width="800" Loaded="LoadData">
     <Grid>
-        <DataGrid Name="Product_message" HorizontalAlignment="Left" AutoGenerateColumns="False">
+        <DataGrid Name="Material_message" HorizontalAlignment="Left" AutoGenerateColumns="False">
             <!--使header居中-->
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
@@ -15,13 +15,12 @@
                 </Style>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Data}" Header="日期" Width="*" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Data}" Header="收货日期" Width="*" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Type}" Header="类别" Width="*" FontSize="16"/>
                 <DataGridTextColumn Binding="{Binding Model}" Header="型号" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Weight}" Header="重量" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Color}" Header="颜色" Width="*" FontSize="16" />
-                <DataGridTextColumn Binding="{Binding Number}" Header="箱数" Width="*" FontSize="16" />
-                <DataGridTextColumn Binding="{Binding IsSend}" Header="是否发货" Width="*" FontSize="16" />
-                <DataGridTextColumn Binding="{Binding Name}" Header="收货商" Width="*" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="供货商" Width="*" FontSize="16" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

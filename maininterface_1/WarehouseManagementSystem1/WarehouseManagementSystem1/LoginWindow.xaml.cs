@@ -52,6 +52,7 @@ namespace WarehouseManagementSystem1
             {
                 App.Current.Shutdown();
             }
+
         }
 
     }
