@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="ChangsiResult_Window" Height="450" Width="800" Loaded="LoadData">
+        Title="长丝/氨纶查询结果" Height="450" Width="800" Loaded="LoadData">
     <Grid>
         <DataGrid Name="Material_message" HorizontalAlignment="Left" AutoGenerateColumns="False">
             <!--使header居中-->

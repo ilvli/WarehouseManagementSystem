@@ -7,13 +7,12 @@
         mc:Ignorable="d"
         Title="长丝/氨纶信息查询" Height="400" Width="700">
     <Grid>
+        <Label Content="长丝/氨纶信息查询" HorizontalAlignment="Left" Margin="265,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Label Content="请输入起始日期" HorizontalAlignment="Left" Margin="177,100,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Label Content="请输入终止日期" HorizontalAlignment="Left" Margin="177,170,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Button Content="查询" HorizontalAlignment="Left" Margin="130,281,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
         <Button Content="取消" HorizontalAlignment="Left" Margin="386,281,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Height="25" Margin="340,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontWeight="Bold"/>
         <TextBox HorizontalAlignment="Left" Height="25" Margin="340,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontWeight="Bold"/>
-        <Label Content="原料信息查询" HorizontalAlignment="Left" Margin="290,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-
     </Grid>
 </Window>

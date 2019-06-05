@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Statistics"
         mc:Ignorable="d"
-        Title="ZhixiangResult_Window" Height="450" Width="800" Loaded="LoadData">
+        Title="纸箱信息统计结果" Height="450" Width="800" Loaded="LoadData">
     <Grid>
         <DataGrid Name="Material_message" HorizontalAlignment="Right" AutoGenerateColumns="False" Width="795.6">
             <!--使header居中-->

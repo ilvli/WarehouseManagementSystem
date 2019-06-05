@@ -20,7 +20,8 @@ namespace WarehouseManagementSystem1.Input_Information
     /// </summary>
     public partial class Zhixiang_Window : Window
     {
-        ObservableCollection<TypeValue> TypeBoxValue = new ObservableCollection<TypeValue>();
+        ObservableCollection<ComboBoxValue> TypeBoxValue = new ObservableCollection<ComboBoxValue>();
+        ObservableCollection<ComboBoxValue> SiplierBoxValue = new ObservableCollection<ComboBoxValue>();
 
         public Zhixiang_Window()
         {
@@ -30,23 +31,37 @@ namespace WarehouseManagementSystem1.Input_Information
             TypeCombo.ItemsSource = TypeBoxValue;
             TypeCombo.DisplayMemberPath = "Name";
             TypeCombo.SelectedValuePath = "Value";
+            //设置供货商下拉栏
+            SiplierCombo.ItemsSource = SiplierBoxValue;
+            SiplierCombo.DisplayMemberPath = "Name";
+            SiplierCombo.SelectedValuePath = "Value";
         }
         private void LoadData(object sender, RoutedEventArgs e)
         {
-            TypeBoxValue.Add(new TypeValue()
+            TypeBoxValue.Add(new ComboBoxValue()
             {
                 Name = "纸箱",
                 Value = "纸箱"
             });
-            TypeBoxValue.Add(new TypeValue()
+            TypeBoxValue.Add(new ComboBoxValue()
             {
                 Name = "纸管",
                 Value = "纸管"
             });
-            TypeBoxValue.Add(new TypeValue()
+            TypeBoxValue.Add(new ComboBoxValue()
             {
                 Name = "塑料袋",
                 Value = "塑料袋"
+            });
+            SiplierBoxValue.Add(new ComboBoxValue()
+            {
+                Name = "宝莎",
+                Value = "宝莎"
+            });
+            SiplierBoxValue.Add(new ComboBoxValue()
+            {
+                Name = "艺流",
+                Value = "艺流"
             });
         }
 
@@ -66,10 +81,5 @@ namespace WarehouseManagementSystem1.Input_Information
                 w.ShowDialog();
             }
         }
-    }
-    public class TypeValue
-    {
-        public string Name { get; set; }
-        public string Value { get; set; }
     }
 }

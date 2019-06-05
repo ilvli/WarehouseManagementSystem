@@ -20,12 +20,32 @@ namespace WarehouseManagementSystem1.Input_Information
     /// </summary>
     public partial class ChangsiAnlun_Window : Window
     {
+        ObservableCollection<ComboBoxValue> ReceivingMerchant = new ObservableCollection<ComboBoxValue>();
+
         public ChangsiAnlun_Window()
         {
             InitializeComponent();
+
+            //设置收货商下拉栏
+            SupplierCombo.ItemsSource = ReceivingMerchant;
+            SupplierCombo.DisplayMemberPath = "Name";
+            SupplierCombo.SelectedValuePath = "Value";
+        }
+        private void LoadData(object sender, RoutedEventArgs e)
+        {
+            ReceivingMerchant.Add(new ComboBoxValue()
+            {
+                Name = "宝莎",
+                Value = "宝莎"
+            });
+            ReceivingMerchant.Add(new ComboBoxValue()
+            {
+                Name = "刘涛",
+                Value = "刘涛"
+            });
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+            private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
             Window w = null;

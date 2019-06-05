@@ -30,7 +30,7 @@ namespace WarehouseManagementSystem1.Information_Statistics
             TypeCombo.ItemsSource = TypeBoxValue;
             TypeCombo.DisplayMemberPath = "Name";
             TypeCombo.SelectedValuePath = "Value";
-            //设置发货商下拉栏
+            //设置供货商下拉栏
             SiplierCombo.ItemsSource = SiplierBoxValue;
             SiplierCombo.DisplayMemberPath = "Name";
             SiplierCombo.SelectedValuePath = "Value";

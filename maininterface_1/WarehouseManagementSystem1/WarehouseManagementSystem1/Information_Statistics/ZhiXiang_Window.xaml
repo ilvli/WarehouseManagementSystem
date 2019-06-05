@@ -8,11 +8,11 @@
         Title="纸箱/纸管/塑料袋信息统计" Height="450" Width="700" Loaded="LoadData">
     <Grid>
         <Label Content="种类" HorizontalAlignment="Left" Margin="210,50,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="发货商" HorizontalAlignment="Left" Margin="200,110,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
+        <Label Content="供货商家" HorizontalAlignment="Left" Margin="190,110,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
         <Label Content="起始日期" HorizontalAlignment="Left" Margin="190,170,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Label Content="终止日期" HorizontalAlignment="Left" Margin="190,230,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <ComboBox Name="TypeCombo" HorizontalAlignment="Left" Margin="270,55,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
-        <ComboBox Name="SiplierCombo" HorizontalAlignment="Left" Margin="270,115,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <ComboBox Name="TypeCombo" HorizontalAlignment="Left" Margin="280,55,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
+        <ComboBox Name="SiplierCombo" HorizontalAlignment="Left" Margin="290,115,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="27" Margin="290,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
         <TextBox HorizontalAlignment="Left" Height="27" Margin="290,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
         <Button Content="确定" HorizontalAlignment="Left" Margin="108,320,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
