@@ -7,19 +7,19 @@
         mc:Ignorable="d"
         Title="产品信息录入" Height="550" Width="700" Loaded="LoadData">
     <Grid>
-        <Label Content="收货日期" HorizontalAlignment="Left" Margin="170,45,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="颜色" HorizontalAlignment="Left" Margin="170,95,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="型号" HorizontalAlignment="Left" Margin="170,145,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="重量" HorizontalAlignment="Left" Margin="170,195,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="箱数" HorizontalAlignment="Left" Margin="170,245,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="发货状态" HorizontalAlignment="Left" Margin="170,295,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="发货状态" HorizontalAlignment="Left" Margin="170,45,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="发货日期" HorizontalAlignment="Left" Margin="170,95,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="颜色" HorizontalAlignment="Left" Margin="185,145,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="型号" HorizontalAlignment="Left" Margin="185,195,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="重量" HorizontalAlignment="Left" Margin="185,245,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="箱数" HorizontalAlignment="Left" Margin="185,295,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
         <Label Content="收货商家" HorizontalAlignment="Left" Margin="170,345,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="280,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="280,100,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="280,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="280,199,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="280,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <ComboBox Name="IsSendingCombo" HorizontalAlignment="Left" Margin="280,300,0,0" VerticalAlignment="Top" Width="250" FontSize="16"/>
+        <TextBox Name="tbTime" HorizontalAlignment="Left" Height="27" Margin="280,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
+        <TextBox Name="tbColor" HorizontalAlignment="Left" Height="27" Margin="280,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
+        <TextBox Name="tbModel" HorizontalAlignment="Left" Height="27" Margin="280,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
+        <TextBox Name="tbWeight" HorizontalAlignment="Left" Height="27" Margin="280,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
+        <TextBox Name="tbNumber" HorizontalAlignment="Left" Height="27" Margin="280,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
+        <ComboBox Name="IsSendingCombo" HorizontalAlignment="Left" Margin="280,50,0,0" VerticalAlignment="Top" Width="250" FontSize="16" SelectionChanged="IsSendingCombo_SelectionChanged"/>
         <ComboBox Name="SupplierCombo" HorizontalAlignment="Left" Margin="280,350,0,0" VerticalAlignment="Top" Width="250" FontSize="16"/>
         <Button Content="确定" HorizontalAlignment="Left" Margin="120,430,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Click="Button_Click" Height="35"/>
         <Button Content="取消" HorizontalAlignment="Left" Margin="400,430,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Click="Button_Click" Height="35"/>

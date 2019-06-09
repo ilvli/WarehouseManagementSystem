@@ -49,4 +49,9 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             }
         }
     }
+    public class ComboBoxValue
+    {
+        public string Name { get; set; }
+        public string Value { get; set; }
+    }
 }

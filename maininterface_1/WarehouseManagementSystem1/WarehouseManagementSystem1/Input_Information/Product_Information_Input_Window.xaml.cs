@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,10 +23,12 @@ namespace WarehouseManagementSystem1.Input_Information
     {
         ObservableCollection<ComboBoxValue> ReceivingMerchant = new ObservableCollection<ComboBoxValue>();
         ObservableCollection<ComboBoxValue> IsSending = new ObservableCollection<ComboBoxValue>();
-
+        WarehouseManagementSystem1.Sqlite_Operate_Function sqlite_Operate = new Sqlite_Operate_Function();
+        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
         public Product_Information_Input_Window()
         {
             InitializeComponent();
+            DBConnection2.Open();
             //设置收货商下拉栏
             SupplierCombo.ItemsSource = ReceivingMerchant;
             SupplierCombo.DisplayMemberPath = "Name";
@@ -38,25 +41,26 @@ namespace WarehouseManagementSystem1.Input_Information
 
         private void LoadData(object sender, RoutedEventArgs e)
         {
-            ReceivingMerchant.Add(new ComboBoxValue()
+            string sqlcommand = "select * from Merchant where Type='收货商'";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection2);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                Name = "宝莎",
-                Value = "宝莎"
-            });
-            ReceivingMerchant.Add(new ComboBoxValue()
-            {
-                Name = "刘涛",
-                Value = "刘涛"
-            });
+                ReceivingMerchant.Add(new ComboBoxValue()
+                {
+                    Name = reader["Name"].ToString(),
+                    Value = reader["Message"].ToString()
+                });
+            }
             IsSending.Add(new ComboBoxValue()
             {
                 Name = "已发货",
-                Value = "已发货"
+                Value = "1"
             });
             IsSending.Add(new ComboBoxValue()
             {
                 Name = "未发货",
-                Value = "未发货"
+                Value = "0"
             });
         }
 
@@ -66,14 +70,32 @@ namespace WarehouseManagementSystem1.Input_Information
             Window w = null;
             switch (btn.Content.ToString())
             {
-                case "确定": break;
-                case "取消": this.Close(); break;
+                case "确定":
+                    sqlite_Operate.InsertProductTable(DBConnection2, tbTime.Text, tbColor.Text, tbModel.Text, tbWeight.Text, tbNumber.Text, IsSendingCombo.SelectedValue.ToString(), SupplierCombo.Text);
+                    MessageBox.Show("保存成功！", "提醒", MessageBoxButton.OK);
+                    this.Close();
+                    break;
+                case "取消":
+                    this.Close();
+                    break;
             }
             if (w != null)
             {
                 w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
                 w.Owner = this;
                 w.ShowDialog();
+            }
+        }
+
+        private void IsSendingCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (IsSendingCombo.SelectedValue.ToString() == "1")
+            {
+                tbTime.IsEnabled = false;
+            }
+            else
+            {
+                tbTime.IsEnabled = true;
             }
         }
     }

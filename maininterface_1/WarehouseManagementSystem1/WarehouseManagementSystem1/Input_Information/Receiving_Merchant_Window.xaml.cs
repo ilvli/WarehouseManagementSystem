@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -19,9 +20,12 @@ namespace WarehouseManagementSystem1.Input_Information
     /// </summary>
     public partial class Receiving_Merchant_Window : Window
     {
+        WarehouseManagementSystem1.Sqlite_Operate_Function sqlite_Operate = new Sqlite_Operate_Function();
+        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
         public Receiving_Merchant_Window()
         {
             InitializeComponent();
+            DBConnection2.Open();
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -30,8 +34,14 @@ namespace WarehouseManagementSystem1.Input_Information
             Window w = null;
             switch (btn.Content.ToString())
             {
-                case "确定": break;
-                case "取消": this.Close(); break;
+                case "确定":
+                    sqlite_Operate.InsertMerchantTable(DBConnection2, "收货商", tbName.Text, tbMessage.Text);
+                    MessageBox.Show("保存成功！", "提醒", MessageBoxButton.OK);
+                    this.Close();
+                    break;
+                case "取消":
+                    this.Close();
+                    break;
             }
             if (w != null)
             {

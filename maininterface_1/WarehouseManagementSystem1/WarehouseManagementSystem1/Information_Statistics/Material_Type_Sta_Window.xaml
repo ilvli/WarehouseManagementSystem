@@ -7,7 +7,7 @@
         mc:Ignorable="d"
         Title="原料信息统计" Height="400" Width="700">
     <Grid>
-        <Label Content="原料信息统计" HorizontalAlignment="Left" Margin="282,10,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Label Content="请选择要统计的原料类别" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
         <Button Content="长丝/氨纶" HorizontalAlignment="Left" Margin="250,90,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
         <Button Content="纸箱/纸管/塑料袋" HorizontalAlignment="Left" Margin="250,170,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.584,2.338" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
         <Button Content="返回" HorizontalAlignment="Left" Margin="250,250,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.584,2.338" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>

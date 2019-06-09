@@ -5,13 +5,13 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1"
         mc:Ignorable="d"
-        Title="仓库管理系统" Height="400" Width="700">
+        Title="青山仓库管理系统" Height="400" Width="800">
     <Grid>
-        <Button Content="录入" HorizontalAlignment="Left" Margin="250,70,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20" Click="Button_Click"/>
-        <Button Content="查询" HorizontalAlignment="Left" Margin="250,140,0,0" VerticalAlignment="Top" Width="200" Height="40" FontWeight="Bold" FontSize="20"  Click="Button_Click"/>
-        <Button Content="统计" HorizontalAlignment="Left" Margin="250,210,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="退出" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Label Content="仓库管理系统" HorizontalAlignment="Left" Margin="286,0,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
+        <Button Content="录入" HorizontalAlignment="Left" Margin="50,110,0,0" VerticalAlignment="Top" Width="200" Height="100" FontWeight="Bold" FontSize="20" Click="Button_Click"/>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="300,110,0,0" VerticalAlignment="Top" Width="200" Height="100" FontWeight="Bold" FontSize="20"  Click="Button_Click"/>
+        <Button Content="统计" HorizontalAlignment="Left" Margin="550,110,0,0" VerticalAlignment="Top" Width="200" Height="100" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="退出" HorizontalAlignment="Left" Margin="300,270,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Label Content="主界面" HorizontalAlignment="Left" Margin="352,0,0,0" VerticalAlignment="Top" FontSize="30" FontWeight="Bold"/>
 
     </Grid>
 </Window>

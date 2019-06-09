@@ -20,7 +20,6 @@
                 <DataGridTextColumn Binding="{Binding Number}" Header="个数" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding UnitPrice}" Header="单价" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Name}" Header="供货商" Width="*" FontSize="16" />
-                <DataGridTextColumn Binding="{Binding Count}" Header="总价" Width="*" FontSize="16" />
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

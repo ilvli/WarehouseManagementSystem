@@ -13,6 +13,7 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Shapes;
 
+
 namespace WarehouseManagementSystem1
 {
     /// <summary>
@@ -98,9 +99,6 @@ namespace WarehouseManagementSystem1
 
         }
 
-        //sqlcommand = "insert into highscores (name, score) values ('Myself2', 6000)";
-        //command = new SQLiteCommand(sqlcommand, DBConnection);
-        //command.ExecuteNonQuery();
         //插入数据
         void InsertMerchantTable(string Type,string Name,string Message)
         {
@@ -108,13 +106,9 @@ namespace WarehouseManagementSystem1
             SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection);
             command.ExecuteNonQuery();
         }
-        //,int Weight 
         void InsertChangsiTable(string Type, string Time, string Color,string Weight, string Merchant)
         {
             double WeightInt = Convert.ToDouble(Weight);
-            //MessageBoxResult result = MessageBox.Show(WeightInt.ToString(), "提醒", MessageBoxButton.OK);
-
-            //string sqlcommand = "insert into Changsi (Type,Time,Color,Weight,Merchant) values ('" + Type + "','" + Time + "','" + Color + "','" + Weight + "','" + Merchant + "')";
             string sqlcommand = "insert into Changsi (Type,Time,Color,Weight,Merchant) values ('" + Type + "','" + Time + "','" + Color + "','" + WeightInt + "','" + Merchant + "')";
             SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection);
             command.ExecuteNonQuery();
@@ -160,14 +154,49 @@ namespace WarehouseManagementSystem1
 
 
         //使用sql查询语句，并显示结果
-        void PrintHighscores(string TableName)
+        void InquiryMerchant()
         {
-            string sqlcommand = "select * from " + TableName + " order by score desc";
+            // + " order by Time desc"
+            string sqlcommand = "select * from Merchant";
             SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection);
             SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
-                tbValue.AppendText("\nName: " + reader["name"] + "\nScore: " + reader["score"]);
+            {
+                //reader["name"] + "\nScore: " + reader["score"]
+                tbValue.AppendText(reader["Type"] + "\n" + reader["Name"] + "\n" + reader["Message"]);
+
+            }
             //Console.ReadLine();
+        }
+        void InquiryChangsi()
+        {
+            string sqlcommand = "select * from Changsi";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                tbValue.AppendText(reader["Type"] + "\n" + reader["Time"] + "\n" + reader["Color"] + "\n" + reader["Weight"] + "\n" + reader["Merchant"]);
+            }
+        }
+        void InquiryZhixiang()
+        {
+            string sqlcommand = "select * from Zhixiang";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                tbValue.AppendText(reader["Type"] + "\n" + reader["Time"] + "\n" + reader["Number"] + "\n" + reader["Price"] + "\n" + reader["Merchant"]);
+            }
+        }
+        void InquiryProduct()
+        {
+            string sqlcommand = "select * from Product";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
+            {
+                tbValue.AppendText(reader["Time"] + "\n" + reader["Color"] + "\n" + reader["Model"] + "\n" + reader["Weight"] + "\n" + reader["Number"] + "\n" + reader["IsSending"] + "\n" + reader["Merchant"]);
+            }
         }
 
         private void but_Click(object sender, RoutedEventArgs e)
@@ -191,7 +220,7 @@ namespace WarehouseManagementSystem1
                     MessageBoxResult result2 = MessageBox.Show(tbTableName.Text + "\n" + tbInsartName.Text + "\n" + tbInsertValue.Text, "输入内容", MessageBoxButton.OK);
                     break;
                 case "查询":
-                    PrintHighscores(tbTableName_Chaxun.Text);
+                    InquiryZhixiang();
                     break;
 
             }

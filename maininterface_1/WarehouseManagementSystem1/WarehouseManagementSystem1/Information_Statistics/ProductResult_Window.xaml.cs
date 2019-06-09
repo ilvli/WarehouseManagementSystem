@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -20,45 +21,55 @@ namespace WarehouseManagementSystem1.Information_Statistics
     /// </summary>
     public partial class ProductResult_Window : Window
     {
-        ObservableCollection<ProductMessage> materialData = new ObservableCollection<ProductMessage>();
+        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+        ObservableCollection<ProductMessage> ProductData = new ObservableCollection<ProductMessage>();
+
+        public string Merchant { get; set; }
+        public string Color { get; set; }
+        public string Model { get; set; }
+        public string IsSending { get; set; }
+        public string DataStart { get; set; }
+        public string DataEnd { get; set; }
+
         public ProductResult_Window()
         {
             InitializeComponent();
+            DBConnection2.Open();
         }
         private void LoadData(object sender, RoutedEventArgs e)
         {
-            materialData.Add(new ProductMessage()
+            string sqlcommand = "select * from Product where Merchant='" + Merchant + "' and Color='" + Color + "' and Model='" + Model + "' and IsSending='" + IsSending + "' and Time>='" + DataStart + "' and Time<='" + DataEnd + "'";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection2);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                Data = "2019-2-12",
-                Model = "A12321",
-                Weight = 24.4,
-                Color = "大红",
-                Number = 21,
-                IsSend = false,
-                Name = "宝莎"
-            });
-            materialData.Add(new ProductMessage()
-            {
-                Data = "2019-5-12",
-                Model = "A80212",
-                Weight = 29.2,
-                Color = "黑",
-                Number = 34,
-                IsSend = true,
-                Name = "宝莎"
-            });
+                string IsSendTmp = reader["IsSending"].ToString();
+                if (IsSendTmp == "1") { IsSendTmp = "已发货"; }
+                else { IsSendTmp = "未发货"; }
 
-            Product_message.ItemsSource = materialData;
+                ProductData.Add(new ProductMessage()
+                {
+                    Data = reader["Time"].ToString(),
+                    Model = reader["Model"].ToString(),
+                    Weight = reader["Weight"].ToString(),
+                    Color = reader["Color"].ToString(),
+                    Number = reader["Number"].ToString(),
+                    IsSend = IsSendTmp,
+                    Name = reader["Merchant"].ToString()
+                });
+            }
+
+            Product_message.ItemsSource = ProductData;
         }
     }
     public class ProductMessage
     {
         public string Data { get; set; }//收货日期
         public string Model { get; set; }//类型
-        public double Weight { get; set; }
+        public string Weight { get; set; }
         public string Color { get; set; }
-        public int Number { get; set; }
-        public bool IsSend { get; set; }
+        public string Number { get; set; }
+        public string IsSend { get; set; }
         public string Name { get; set; }//收货商家
     }
 }

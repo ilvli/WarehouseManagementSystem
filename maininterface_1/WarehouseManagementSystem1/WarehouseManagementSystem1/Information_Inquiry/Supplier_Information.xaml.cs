@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -21,25 +22,52 @@ namespace WarehouseManagementSystem1.Information_Inquiry
     public partial class Supplier_Information : Window
     {
         ObservableCollection<MerchantMessage> merchantData = new ObservableCollection<MerchantMessage>();
+        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+
         public Supplier_Information()
         {
             InitializeComponent();
+            DBConnection2.Open();
+            bnSave.IsEnabled = false;
+            bnDelete.IsEnabled = false;
+            Sipplier_message.IsReadOnly = true;
         }
         private void LoadData(object sender, RoutedEventArgs e)
         {
-            merchantData.Add(new MerchantMessage()
+            string sqlcommand = "select * from Merchant where Type='供货商'";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection2);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                Name = "宝莎",
-                Remark = "最大客户",
-            });
-            merchantData.Add(new MerchantMessage()
+                merchantData.Add(new MerchantMessage()
+                {
+                    Name = reader["Name"].ToString(),
+                    Remark = reader["Message"].ToString()
+                });
+            }
+            Sipplier_message.ItemsSource = merchantData;
+        }
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            switch (btn.Content.ToString())
             {
-                Name = "永发",
-                Remark = "价格最优",
-            });
-
-            Supplier_message.ItemsSource = merchantData;
-            //((this.FindName("DATA_GRID")) as DataGrid).ItemsSource = merchantData;
+                case "编辑":
+                    Sipplier_message.IsReadOnly = false;
+                    bnSave.IsEnabled = true;
+                    bnDelete.IsEnabled = true;
+                    break;
+                case "保存":
+                    Sipplier_message.IsReadOnly = true;
+                    bnSave.IsEnabled = false;
+                    bnDelete.IsEnabled = false;
+                    //string result = Changsi_message.SelectedItem.ToString();
+                    MessageBox.Show("编辑成功", "提醒", MessageBoxButton.OK);
+                    break;
+                case "返回":
+                    this.Close();
+                    break;
+            }
         }
     }
 

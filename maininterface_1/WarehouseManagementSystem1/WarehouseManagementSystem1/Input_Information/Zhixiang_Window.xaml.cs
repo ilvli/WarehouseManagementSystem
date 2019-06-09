@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,11 +23,13 @@ namespace WarehouseManagementSystem1.Input_Information
     {
         ObservableCollection<ComboBoxValue> TypeBoxValue = new ObservableCollection<ComboBoxValue>();
         ObservableCollection<ComboBoxValue> SiplierBoxValue = new ObservableCollection<ComboBoxValue>();
-
+        WarehouseManagementSystem1.Sqlite_Operate_Function sqlite_Operate = new Sqlite_Operate_Function();
+        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
         public Zhixiang_Window()
         {
             InitializeComponent();
-
+            //打开数据库连接
+            DBConnection2.Open();
             //设置种类下拉栏
             TypeCombo.ItemsSource = TypeBoxValue;
             TypeCombo.DisplayMemberPath = "Name";
@@ -53,16 +56,18 @@ namespace WarehouseManagementSystem1.Input_Information
                 Name = "塑料袋",
                 Value = "塑料袋"
             });
-            SiplierBoxValue.Add(new ComboBoxValue()
+            //插入供货商家
+            string sqlcommand = "select * from Merchant where Type='供货商'";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection2);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                Name = "宝莎",
-                Value = "宝莎"
-            });
-            SiplierBoxValue.Add(new ComboBoxValue()
-            {
-                Name = "艺流",
-                Value = "艺流"
-            });
+                SiplierBoxValue.Add(new ComboBoxValue()
+                {
+                    Name = reader["Name"].ToString(),
+                    Value = reader["Message"].ToString()
+                });
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -71,7 +76,11 @@ namespace WarehouseManagementSystem1.Input_Information
             Window w = null;
             switch (btn.Content.ToString())
             {
-                case "确定": break;
+                case "确定":
+                    sqlite_Operate.InsertZhixiangTable(DBConnection2, TypeCombo.Text, tbTime.Text, tbNumber.Text, tbPrice.Text, SiplierCombo.Text);
+                    MessageBox.Show("保存成功！", "提醒", MessageBoxButton.OK);
+                    this.Close();
+                    break;
                 case "取消": this.Close(); break;
             }
             if (w != null)

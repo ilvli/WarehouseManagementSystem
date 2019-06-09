@@ -29,8 +29,12 @@ namespace WarehouseManagementSystem1.Information_Statistics
             Window w = null;
             switch (btn.Content.ToString())
             {
-                case "长丝/氨纶": w = new Material_Information_Statistics(); break;
-                case "纸箱/纸管/塑料袋": w = new ZhiXiang_Window(); break;
+                case "长丝/氨纶":
+                    w = new Changsi_Inquiry_Window();
+                    break;
+                case "纸箱/纸管/塑料袋":
+                    w = new ZhiXiang_Window();
+                    break;
                 case "返回": this.Close(); break;
             }
             if (w != null)

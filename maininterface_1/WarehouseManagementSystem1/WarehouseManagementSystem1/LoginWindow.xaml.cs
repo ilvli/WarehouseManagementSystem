@@ -23,6 +23,9 @@ namespace WarehouseManagementSystem1
         public LoginWindow()
         {
             InitializeComponent();
+            ImageBrush bg = new ImageBrush();
+            bg.ImageSource = new BitmapImage(new Uri("D:\\GitHub\\WarehouseManagementSystem\\maininterface_1\\WarehouseManagementSystem1\\WarehouseManagementSystem1\\Source\\Login3.jpg", UriKind.RelativeOrAbsolute));
+            this.Background = bg;
             this.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
             userNameTextBox.Text = string.Empty;
         }
@@ -40,7 +43,7 @@ namespace WarehouseManagementSystem1
                     }
                     else
                     {
-                        MessageBoxResult result = MessageBox.Show("密码输入错误！", "提醒", MessageBoxButton.OK);
+                        MessageBox.Show("密码输入错误！", "提醒", MessageBoxButton.OK);
                     }
                     break;
                 case "退出": App.Current.Shutdown(); break;

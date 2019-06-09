@@ -26,18 +26,19 @@ namespace WarehouseManagementSystem1.Information_Inquiry
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            Window w = null;
             Button btn = sender as Button;
             switch (btn.Content.ToString())
             {
                 case "取消": this.Close(); break;
-                case "查询":w = new Product_Window();break;
-            }
-            if (w != null)
-            {
-                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
-                w.Owner = this;
-                w.ShowDialog();
+                case "查询":
+                    Product_result Result = new Product_result
+                    {
+                        DataStart = tbStartTime.Text,
+                        DataEnd = tbEndTime.Text
+                    };
+                    Result.ShowDialog();
+                    Result.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
+                    break;
             }
         }
     }

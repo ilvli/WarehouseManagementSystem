@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data.SQLite;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -23,9 +24,12 @@ namespace WarehouseManagementSystem1.Information_Statistics
         //存储种类和供货商信息
         ObservableCollection<ComboBoxValue> TypeBoxValue = new ObservableCollection<ComboBoxValue>();
         ObservableCollection<ComboBoxValue> SiplierBoxValue = new ObservableCollection<ComboBoxValue>();
+        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+
         public ZhiXiang_Window()
         {
             InitializeComponent();
+            DBConnection2.Open();
             //设置种类下拉栏
             TypeCombo.ItemsSource = TypeBoxValue;
             TypeCombo.DisplayMemberPath = "Name";
@@ -52,36 +56,42 @@ namespace WarehouseManagementSystem1.Information_Statistics
                 Name = "塑料袋",
                 Value = "塑料袋"
             });
-            SiplierBoxValue.Add(new ComboBoxValue()
+            TypeBoxValue.Add(new ComboBoxValue()
             {
-                Name = "宝莎",
-                Value = "宝莎"
+                Name = "全部",
+                Value = "全部"
             });
-            SiplierBoxValue.Add(new ComboBoxValue()
+            
+            string sqlcommand = "select * from Merchant where Type='供货商'";
+            SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection2);
+            SQLiteDataReader reader = command.ExecuteReader();
+            while (reader.Read())
             {
-                Name = "艺流",
-                Value = "艺流"
-            });
+                SiplierBoxValue.Add(new ComboBoxValue()
+                {
+                    Name = reader["Name"].ToString(),
+                    Value = reader["Name"].ToString()
+                });
+            }
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Button btn = sender as Button;
-            Window w = null;
             switch (btn.Content.ToString())
             {
                 case "确定":
-                    w = new ZhixiangResult_Window();
-                    string combostr = TypeCombo.SelectedValue.ToString()+"\n"+SiplierCombo.SelectedValue.ToString();
-                    MessageBoxResult result = MessageBox.Show(combostr, "下拉栏选择的信息", MessageBoxButton.OK);
+                    ZhixiangResult_Window Result = new ZhixiangResult_Window
+                    {
+                        DataStart = tbStartData.Text,
+                        DataEnd = tbEndData.Text,
+                        TypeR = TypeCombo.Text,
+                        Sipplier = SiplierCombo.Text
+                    };
+                    Result.ShowDialog();
+                    Result.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
                     break;
                 case "取消": this.Close(); break;
-            }
-            if (w != null)
-            {
-                w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
-                w.Owner = this;
-                w.ShowDialog();
             }
         }
     }

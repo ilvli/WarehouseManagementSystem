@@ -22,7 +22,7 @@
         <Label Content="name" HorizontalAlignment="Left" Margin="27,175,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="value" HorizontalAlignment="Left" Margin="27,215,0,0" VerticalAlignment="Top" FontSize="16"/>
         <TextBox Name="tbTableName_Chaxun" HorizontalAlignment="Left" Height="34" Margin="401,140,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" FontSize="20"/>
-        <TextBox Name="tbValue" HorizontalAlignment="Left" Height="94" Margin="400,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" FontSize="20"/>
+        <TextBox Name="tbValue" HorizontalAlignment="Left" Height="94" Margin="400,174,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="177" FontSize="15"/>
         <Button Name="but_Insert_Copy" Content="查询" HorizontalAlignment="Left" Margin="400,273,0,0" VerticalAlignment="Top" Width="177" Height="34" FontSize="16" Click="but_Click"/>
         <Label Content="表名" HorizontalAlignment="Left" Margin="341,144,0,0" VerticalAlignment="Top" FontSize="16"/>
         <Label Content="value" HorizontalAlignment="Left" Margin="337,208,0,0" VerticalAlignment="Top" FontSize="16"/>

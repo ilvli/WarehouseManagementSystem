@@ -7,11 +7,12 @@
         mc:Ignorable="d"
         Title="请输入您的账户和密码" Height="400" Width="700">
     <Grid>
-        <Label Content="账户：" HorizontalAlignment="Left" Margin="221,64,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Height="27" Margin="271,66,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" FontSize="20" />
-        <Label Content="密码：" HorizontalAlignment="Left" Margin="221,127,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <PasswordBox Name="PasswordTextBox" HorizontalAlignment="Left" Margin="271,130,0,0" Height="27" Width="211" VerticalAlignment="Top" FontSize="20"/>
-        <Button Content="登录" HorizontalAlignment="Left" Margin="150,235,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click" RenderTransformOrigin="0.422,1.73" Height="33" FontWeight="Bold" FontSize="16"/>
-        <Button Content="退出" HorizontalAlignment="Left" Margin="400,235,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click" Height="33" FontWeight="Bold" FontSize="16"/>
+        <Label Content="账户：" HorizontalAlignment="Left" Margin="215,110,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Height="30" Margin="268,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" FontSize="20" />
+        <Label Content="密码：" HorizontalAlignment="Left" Margin="215,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
+        <PasswordBox Name="PasswordTextBox" HorizontalAlignment="Left" Margin="268,176,0,0" Height="30" Width="211" VerticalAlignment="Top" FontSize="20"/>
+        <Button Content="登录" HorizontalAlignment="Left" Margin="150,270,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click" RenderTransformOrigin="0.422,1.73" Height="33" FontWeight="Bold" FontSize="16"/>
+        <Button Content="退出" HorizontalAlignment="Left" Margin="400,270,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click" Height="33" FontWeight="Bold" FontSize="16"/>
+        <Label Content="青山仓库管理系统" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
     </Grid>
 </Window>

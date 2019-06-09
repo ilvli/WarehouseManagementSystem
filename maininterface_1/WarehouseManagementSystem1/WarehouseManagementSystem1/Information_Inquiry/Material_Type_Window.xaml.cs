@@ -30,8 +30,12 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             Window w = null;
             switch (btn.Content.ToString())
             {
-                case "长丝/氨纶":w = new ChangsiResult_Window();break;
-                case "纸箱/纸管/塑料袋":w = new Zhixiang_result(); break;
+                case "长丝/氨纶":
+                    w = new Changsi_Inquiry_Window();
+                    break;
+                case "纸箱/纸管/塑料袋":
+                    w = new Zhixiang_Inquiry_Window();
+                    break;
                 case "返回": this.Close(); break;
             }
             if (w != null)

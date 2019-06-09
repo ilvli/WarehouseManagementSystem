@@ -9,8 +9,8 @@
     <Grid>
         <Label Content="商家称呼" HorizontalAlignment="Left" Margin="155,80,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.342,2.626" FontSize="20" FontWeight="Bold"/>
         <Label Content="其他信息" HorizontalAlignment="Left" Margin="155,160,0,0" VerticalAlignment="Top" RenderTransformOrigin="-1.342,2.626" FontSize="20" FontWeight="Bold"/>
-        <TextBox HorizontalAlignment="Left" Height="27" Margin="260,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" FontSize="16"/>
-        <TextBox HorizontalAlignment="Left" Height="54" Margin="260,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" FontSize="16"/>
+        <TextBox Name="tbName" HorizontalAlignment="Left" Height="27" Margin="260,85,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" FontSize="16"/>
+        <TextBox Name="tbMessage" HorizontalAlignment="Left" Height="54" Margin="260,165,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="255" FontSize="16"/>
         <Button Content="确定" HorizontalAlignment="Left" Margin="107,280,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Click="Button_Click" Height="35"/>
         <Button Content="取消" HorizontalAlignment="Left" Margin="398,280,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Click="Button_Click" Height="35"/>
     </Grid>

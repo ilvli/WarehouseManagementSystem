@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="供货商信息列表" Height="450" Width="800" Loaded="LoadData">
+        Title="供货商信息列表" Height="650" Width="840" Loaded="LoadData">
     <Grid>
-        <DataGrid Name="Supplier_message" HorizontalAlignment="Left" AutoGenerateColumns="False">
+        <DataGrid Name="Sipplier_message" HorizontalAlignment="Left" AutoGenerateColumns="False" Margin="0,0,0,80">
             <!--使header居中-->
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
@@ -19,5 +19,9 @@
                 <DataGridTextColumn Binding="{Binding Remark}" Header="其他信息" Width="*" FontSize="16"/>
             </DataGrid.Columns>
         </DataGrid>
+        <Button Name="bnEdit" Content="编辑" HorizontalAlignment="Left" Margin="100,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnSave" Content="保存" HorizontalAlignment="Left" Margin="280,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnDelete" Content="删除" HorizontalAlignment="Left" Margin="460,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="640,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
     </Grid>
 </Window>
