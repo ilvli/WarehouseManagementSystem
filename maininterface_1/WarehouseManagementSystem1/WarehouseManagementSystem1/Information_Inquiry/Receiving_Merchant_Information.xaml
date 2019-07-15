@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="收货商家信息列表" Height="650" Width="840" Loaded="LoadData">
+        Title="收货商家信息列表" Height="700" Width="850" Loaded="LoadData">
     <Grid>
-        <DataGrid Name="ReceivingMerchant_message" HorizontalAlignment="Left" AutoGenerateColumns="False" Margin="0,0,0,80">
+        <DataGrid Name="ReceivingMerchant_message" HorizontalAlignment="Left" AutoGenerateColumns="False" Margin="0,0,0,80" CanUserAddRows="False" BeginningEdit="ReceivingMerchant_message_BeginningEdit"  CellEditEnding="ReceivingMerchant_message_CellEditEnding">
             <!--使header居中-->
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
@@ -15,13 +15,15 @@
                 </Style>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
-                <DataGridTextColumn Binding="{Binding Name}" Header="收货商称呼" Width="300" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Number}" Header="序号" Width="40" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Type}" Header="类型" Width="60" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Name}" Header="收货商称呼" Width="250" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Remark}" Header="其他信息" Width="*" FontSize="16"/>
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="bnEdit" Content="编辑" HorizontalAlignment="Left" Margin="100,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
-        <Button Name="bnSave" Content="保存" HorizontalAlignment="Left" Margin="280,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
-        <Button Name="bnDelete" Content="删除" HorizontalAlignment="Left" Margin="460,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
-        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="640,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnEdit" Content="编辑" HorizontalAlignment="Left" Margin="100,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnSave" Content="退出编辑" HorizontalAlignment="Left" Margin="280,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnDelete" Content="删除" HorizontalAlignment="Left" Margin="460,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="640,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
     </Grid>
 </Window>

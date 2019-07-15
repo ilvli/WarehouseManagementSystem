@@ -58,7 +58,7 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             Button btn = sender as Button;
             switch (btn.Content.ToString())
             {
-                case "取消":
+                case "返回":
                     this.Close();
                     break;
                 case "查询":

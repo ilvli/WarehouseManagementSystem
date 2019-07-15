@@ -5,12 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Statistics"
         mc:Ignorable="d"
-        Title="信息统计" Height="400" Width="700">
+        Title="信息统计" Height="450" Width="800">
     <Grid>
-        <Label Content="请选择要统计的信息类别" HorizontalAlignment="Left" Margin="207,10,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
-        <Button Content="产品" HorizontalAlignment="Left" Margin="250,100,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Height="40" Click="Button_Click"/>
-        <Button Content="原料" HorizontalAlignment="Left" Margin="250,180,0,0" VerticalAlignment="Top" Width="200" Height="37" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="返回" HorizontalAlignment="Left" Margin="250,260,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-
+        <Label Content="请选择要统计的信息类别" HorizontalAlignment="Left" Margin="203,0,0,0" 
+               VerticalAlignment="Top" FontSize="35" FontWeight="Bold"/>
+        <Button Content="包纱" HorizontalAlignment="Left" Margin="300,99,0,0" VerticalAlignment="Top" 
+                Width="200" FontSize="25" FontWeight="Bold" Height="60" Click="Button_Click"/>
+        <Button Content="原料" HorizontalAlignment="Left" Margin="300,189,0,0" VerticalAlignment="Top" 
+                Width="200" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="300,279,0,0" VerticalAlignment="Top" 
+                Width="200" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Window>

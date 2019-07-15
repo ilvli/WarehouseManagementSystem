@@ -24,7 +24,7 @@ namespace WarehouseManagementSystem1.Input_Information
         ObservableCollection<ComboBoxValue> TypeBoxValue = new ObservableCollection<ComboBoxValue>();
         ObservableCollection<ComboBoxValue> SiplierBoxValue = new ObservableCollection<ComboBoxValue>();
         WarehouseManagementSystem1.Sqlite_Operate_Function sqlite_Operate = new Sqlite_Operate_Function();
-        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\QinShan.sqlite");
         public Zhixiang_Window()
         {
             InitializeComponent();
@@ -81,7 +81,10 @@ namespace WarehouseManagementSystem1.Input_Information
                     MessageBox.Show("保存成功！", "提醒", MessageBoxButton.OK);
                     this.Close();
                     break;
-                case "取消": this.Close(); break;
+                case "返回":
+                    DBConnection2.Close();
+                    this.Close();
+                    break;
             }
             if (w != null)
             {

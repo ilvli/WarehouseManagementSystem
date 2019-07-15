@@ -21,83 +21,75 @@ namespace WarehouseManagementSystem1.Information_Statistics
     /// </summary>
     public partial class Changsi_Inquiry_Window : Window
     {
-        ObservableCollection<ComboBoxValue> Sipplier = new ObservableCollection<ComboBoxValue>();
-        ObservableCollection<ComboBoxValue> Color = new ObservableCollection<ComboBoxValue>();
-        ObservableCollection<ComboBoxValue> Type = new ObservableCollection<ComboBoxValue>();
-        ObservableCollection<ComboBoxValue> Model = new ObservableCollection<ComboBoxValue>();
-        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+        ObservableCollection<ComboBoxValue> SipplierValue = new ObservableCollection<ComboBoxValue>();
+        ObservableCollection<ComboBoxValue> ColorValue = new ObservableCollection<ComboBoxValue>();
+        ObservableCollection<ComboBoxValue> TypeValue = new ObservableCollection<ComboBoxValue>();
+        ObservableCollection<ComboBoxValue> ModelValue = new ObservableCollection<ComboBoxValue>();
+        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\QinShan.sqlite");
 
         public Changsi_Inquiry_Window()
         {
             InitializeComponent();
             DBConnection2.Open();
             //设置收货商下拉栏
-            SipplierCombo.ItemsSource = Sipplier;
+            SipplierCombo.ItemsSource = SipplierValue;
             SipplierCombo.DisplayMemberPath = "Name";
             SipplierCombo.SelectedValuePath = "Value";
             //设置颜色下拉栏
-            ColorCombo.ItemsSource = Color;
+            ColorCombo.ItemsSource = ColorValue;
             ColorCombo.DisplayMemberPath = "Name";
             ColorCombo.SelectedValuePath = "Value";
             //设置类别下拉栏
-            TypeCombo.ItemsSource = Type;
+            TypeCombo.ItemsSource = TypeValue;
             TypeCombo.DisplayMemberPath = "Name";
             TypeCombo.SelectedValuePath = "Value";
             //设置型号下拉栏
-            ModelCombo.ItemsSource = Model;
+            ModelCombo.ItemsSource = ModelValue;
             ModelCombo.DisplayMemberPath = "Name";
             ModelCombo.SelectedValuePath = "Value";
+
+            ModelCombo.IsEnabled = false;
+            SipplierCombo.IsEnabled = false;
         }
 
-        private void LoadData(object sender, RoutedEventArgs e)
+        private void LoadCombo(string sqlcommand, ObservableCollection<ComboBoxValue> comboBoxValues, string NameValue)
         {
-            string sqlcommand = "select Name from Merchant where Type='供货商'";
             SQLiteCommand command = new SQLiteCommand(sqlcommand, DBConnection2);
             SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
-                Sipplier.Add(new ComboBoxValue()
+                comboBoxValues.Add(new ComboBoxValue()
                 {
-                    Name = reader["Name"].ToString(),
-                    Value = reader["Name"].ToString()
+                    Name = reader[NameValue].ToString(),
+                    Value = reader[NameValue].ToString()
                 });
             }
+        }
 
-            sqlcommand = "select DISTINCT Color from Changsi";
-            command = new SQLiteCommand(sqlcommand, DBConnection2);
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                Color.Add(new ComboBoxValue()
-                {
-                    Name = reader["Color"].ToString(),
-                    Value = reader["Color"].ToString()
-                });
-            }
+        private void LoadData(object sender, RoutedEventArgs e)
+        {
             //类别
-            Type.Add(new ComboBoxValue()
+            TypeValue.Add(new ComboBoxValue()
             {
                 Name = "长丝",
                 Value = "长丝"
             });
-            Type.Add(new ComboBoxValue()
+            TypeValue.Add(new ComboBoxValue()
             {
                 Name = "氨纶",
                 Value = "氨纶"
             });
 
-            sqlcommand = "select DISTINCT Model from Changsi ";
-            command = new SQLiteCommand(sqlcommand, DBConnection2);
-            reader = command.ExecuteReader();
-            while (reader.Read())
-            {
-                Model.Add(new ComboBoxValue()
-                {
-                    Name = reader["Model"].ToString(),
-                    Value = reader["Model"].ToString()
-                });
-            }
-           
+            string sqlcommand = "select Name from Merchant where Type='供货商'";
+            LoadCombo(sqlcommand, SipplierValue, "Name");
+            
+            sqlcommand = "select Message from ModelAndColor where Type='颜色'";
+            LoadCombo(sqlcommand, ColorValue, "Message");
+            ColorValue.Add(new ComboBoxValue()
+             {
+                 Name = "全部",
+                 Value = "全部"
+             });
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -105,7 +97,10 @@ namespace WarehouseManagementSystem1.Information_Statistics
             Button btn = sender as Button;
             switch (btn.Content.ToString())
             {
-                case "返回": this.Close(); break;
+                case "返回":
+                    DBConnection2.Close();
+                    this.Close();
+                    break;
                 case "确定":
                     ChangsiResult_Window Result = new ChangsiResult_Window
                     {
@@ -124,6 +119,7 @@ namespace WarehouseManagementSystem1.Information_Statistics
 
         private void TypeCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            SipplierCombo.IsEnabled = true;
             if (TypeCombo.SelectedValue.ToString() == "氨纶")
             {
                 ColorCombo.IsEnabled = false;
@@ -132,6 +128,20 @@ namespace WarehouseManagementSystem1.Information_Statistics
             {
                 ColorCombo.IsEnabled = true;
             }
+        }
+
+        private void SipplierCombo_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            ModelValue.Clear();
+            ModelCombo.IsEnabled = true;
+            //加载型号下拉栏
+            string sqlcommand = "select Message from ModelAndColor where Type='" + TypeCombo.SelectedValue.ToString() + "' and Merchant='" + SipplierCombo.SelectedValue.ToString() + "'";
+            LoadCombo(sqlcommand, ModelValue, "Message");
+            ModelValue.Add(new ComboBoxValue()
+            {
+                Name = "全部",
+                Value = "全部"
+            });
         }
     }
 }

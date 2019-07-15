@@ -28,6 +28,7 @@ namespace WarehouseManagementSystem1.Information_Inquiry
         {
             Button btn = sender as Button;
             Window w = null;
+            //按下对应键时打开对应的窗口
             switch (btn.Content.ToString())
             {
                 case "长丝/氨纶":

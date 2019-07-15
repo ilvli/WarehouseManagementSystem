@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="产品查询结果" Height="650" Width="840" Loaded="LoadData">
+        Title="包纱查询结果" Height="720" Width="900" Loaded="LoadData">
     <Grid>
-        <DataGrid Name="Product_message" HorizontalAlignment="Left" AutoGenerateColumns="False" Margin="0,0,0,80">
+        <DataGrid Name="Product_message" HorizontalAlignment="Left" AutoGenerateColumns="False"  Margin="0,0,0,120" CanUserAddRows="False" BeginningEdit="Product_message_BeginningEdit"  CellEditEnding="Product_message_CellEditEnding">
             <!--使header居中-->
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
@@ -15,6 +15,7 @@
                 </Style>
             </DataGrid.ColumnHeaderStyle>
             <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Numb}" Header="序号" Width="40" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Data}" Header="日期" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Model}" Header="型号" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Weight}" Header="重量" Width="*" FontSize="16" />
@@ -24,9 +25,19 @@
                 <DataGridTextColumn Binding="{Binding Name}" Header="收货商" Width="*" FontSize="16" />
             </DataGrid.Columns>
         </DataGrid>
-        <Button Name="bnEdit" Content="编辑" HorizontalAlignment="Left" Margin="100,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
-        <Button Name="bnSave" Content="保存" HorizontalAlignment="Left" Margin="280,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
-        <Button Name="bnDelete" Content="删除" HorizontalAlignment="Left" Margin="460,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
-        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="640,565,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button x:Name="bnEdit_Copy" Content="导出" HorizontalAlignment="Left" Margin="110,630,0,0" 
+            VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnEdit" Content="编辑" HorizontalAlignment="Left" Margin="250,630,0,0" 
+                VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnSave" Content="退出编辑" HorizontalAlignment="Left" Margin="390,630,0,0" 
+                VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnDelete" Content="删除" HorizontalAlignment="Left" Margin="530,630,0,0" 
+                VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="670,630,0,0" 
+                VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Label Content="重量合计：" HorizontalAlignment="Left" Margin="220,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Label Content="" Name="WeightContent" HorizontalAlignment="Left" Margin="310,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Label Content="箱数合计：" HorizontalAlignment="Left" Margin="520,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Label Content="" Name="XiangziContent" HorizontalAlignment="Left" Margin="610,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
     </Grid>
 </Window>

@@ -5,17 +5,17 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Statistics"
         mc:Ignorable="d"
-        Title="纸箱/纸管/塑料袋信息统计" Height="450" Width="700" Loaded="LoadData">
+        Title="纸箱/纸管/塑料袋信息统计" Height="450" Width="800" Loaded="LoadData">
     <Grid>
-        <Label Content="种类" HorizontalAlignment="Left" Margin="210,50,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="供货商家" HorizontalAlignment="Left" Margin="190,110,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="20"/>
-        <Label Content="起始日期" HorizontalAlignment="Left" Margin="190,170,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="终止日期" HorizontalAlignment="Left" Margin="190,230,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <ComboBox Name="TypeCombo" HorizontalAlignment="Left" Margin="280,55,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
-        <ComboBox Name="SiplierCombo" HorizontalAlignment="Left" Margin="290,115,0,0" VerticalAlignment="Top" Width="200" FontSize="16"/>
-        <TextBox Name="tbStartData" HorizontalAlignment="Left" Height="27" Margin="290,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
-        <TextBox Name="tbEndData" HorizontalAlignment="Left" Height="27" Margin="290,235,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="200" FontSize="16"/>
-        <Button Content="确定" HorizontalAlignment="Left" Margin="108,320,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="取消" HorizontalAlignment="Left" Margin="382,320,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Label Content="种类" HorizontalAlignment="Left" Margin="228,48,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        <Label Content="供货商家" HorizontalAlignment="Left" Margin="208,108,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="25"/>
+        <Label Content="起始日期" HorizontalAlignment="Left" Margin="208,168,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        <Label Content="终止日期" HorizontalAlignment="Left" Margin="208,228,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
+        <ComboBox Name="TypeCombo" HorizontalAlignment="Left" Margin="326,53,0,0" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <ComboBox Name="SiplierCombo" HorizontalAlignment="Left" Margin="326,113,0,0" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <TextBox Name="tbStartData" HorizontalAlignment="Left" Height="35" Margin="326,173,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <TextBox Name="tbEndData" HorizontalAlignment="Left" Height="35" Margin="326,233,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <Button Content="确定" HorizontalAlignment="Left" Margin="130,316,0,0" VerticalAlignment="Top" Width="200" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="470,316,0,0" VerticalAlignment="Top" Width="200" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Window>

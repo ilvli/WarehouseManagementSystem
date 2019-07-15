@@ -30,7 +30,7 @@ namespace WarehouseManagementSystem1.Information_Statistics
             Window w = null;
             switch (btn.Content.ToString())
             {
-                case "产品":
+                case "包纱":
                     w = new Product_Information_Statistics();
                     break;
                 case "原料":
@@ -40,9 +40,11 @@ namespace WarehouseManagementSystem1.Information_Statistics
             }
             if (w != null)
             {
+                this.Hide();
                 w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
                 w.Owner = this;
                 w.ShowDialog();
+                this.ShowDialog();
             }
         }
     }

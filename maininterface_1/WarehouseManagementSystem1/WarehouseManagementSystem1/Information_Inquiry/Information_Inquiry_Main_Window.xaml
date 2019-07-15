@@ -4,13 +4,19 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         mc:Ignorable="d"
-        Title="信息查询" Height="400" Width="700">
+        Title="信息查询" Height="480" Width="800">
     <Grid>
-        <Label Content="请选择要查询的信息类别" HorizontalAlignment="Left" Margin="208,10,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
-        <Button Content="原料查询" HorizontalAlignment="Left" Margin="250,70,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Height="40" Click="Button_Click"/>
-        <Button Content="产品查询" HorizontalAlignment="Left" Margin="250,140,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="商家查询" HorizontalAlignment="Left" Margin="250,210,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="返回" HorizontalAlignment="Left" Margin="250,280,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-
+        <Label Content="请选择要查询的信息类别" HorizontalAlignment="Left" Margin="203,0,0,0" 
+               VerticalAlignment="Top" FontSize="35" FontWeight="Bold"/>
+        <Button Content="原料查询" HorizontalAlignment="Left" Margin="120,95,0,0" Width="250" 
+                VerticalAlignment="Top" FontSize="25" FontWeight="Bold" Height="120" Click="Button_Click"/>
+        <Button Content="包纱查询" HorizontalAlignment="Left" Margin="430,95,0,0" VerticalAlignment="Top" 
+                Width="250" Height="120" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="商家查询" HorizontalAlignment="Left" Margin="120,235,0,0" VerticalAlignment="Top" 
+                Width="250" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="型号和颜色" HorizontalAlignment="Left" Margin="430,235,0,0" VerticalAlignment="Top" 
+            Width="250" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="300,344,0,0" VerticalAlignment="Top" 
+                Width="200" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Window>

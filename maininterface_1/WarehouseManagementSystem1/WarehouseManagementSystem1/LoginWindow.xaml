@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1"
         mc:Ignorable="d"
-        Title="请输入您的账户和密码" Height="400" Width="700">
+        Title="请输入您的账户和密码" Height="450" Width="700" Closed="Window_Closed">
     <Grid>
-        <Label Content="账户：" HorizontalAlignment="Left" Margin="215,110,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Height="30" Margin="268,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="211" FontSize="20" />
-        <Label Content="密码：" HorizontalAlignment="Left" Margin="215,175,0,0" VerticalAlignment="Top" FontWeight="Bold" FontSize="18"/>
-        <PasswordBox Name="PasswordTextBox" HorizontalAlignment="Left" Margin="268,176,0,0" Height="30" Width="211" VerticalAlignment="Top" FontSize="20"/>
-        <Button Content="登录" HorizontalAlignment="Left" Margin="150,270,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click" RenderTransformOrigin="0.422,1.73" Height="33" FontWeight="Bold" FontSize="16"/>
-        <Button Content="退出" HorizontalAlignment="Left" Margin="400,270,0,0" VerticalAlignment="Top" Width="150" Click="Button_Click" Height="33" FontWeight="Bold" FontSize="16"/>
-        <Label Content="青山仓库管理系统" HorizontalAlignment="Left" Margin="200,10,0,0" VerticalAlignment="Top" FontSize="36" FontWeight="Bold"/>
+        <Label Content="青山仓库管理系统" HorizontalAlignment="Left" Margin="215,10,0,0" VerticalAlignment="Top" FontSize="36" 
+               FontWeight="Bold"/>
+        <Label Content="账户" HorizontalAlignment="Left" Margin="215,117,0,0" VerticalAlignment="Top" FontWeight="Bold" 
+               FontSize="20"/>
+        <TextBox Name="userNameTextBox" HorizontalAlignment="Left" Height="35" Margin="270,119,0,0" TextWrapping="Wrap" 
+                 VerticalAlignment="Top" Width="210" FontSize="25" />
+        <Label Content="密码" HorizontalAlignment="Left" Margin="215,184,0,0" VerticalAlignment="Top" FontWeight="Bold" 
+               FontSize="20"/>
+        <PasswordBox Name="PasswordTextBox" HorizontalAlignment="Left" Margin="270,185,0,0" Height="35" Width="210" 
+                     VerticalAlignment="Top" FontSize="25"/>
+        <Button Content="登录" HorizontalAlignment="Left" Margin="145,280,0,0" VerticalAlignment="Top" Width="160" 
+                Click="Button_Click" RenderTransformOrigin="0.422,1.73" Height="60" FontWeight="Bold" FontSize="25"/>
+        <Button Content="退出" HorizontalAlignment="Left" Margin="395,280,0,0" VerticalAlignment="Top" Width="160" 
+                Click="Button_Click" Height="60" FontWeight="Bold" FontSize="25"/>
     </Grid>
 </Window>

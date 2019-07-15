@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Statistics"
         mc:Ignorable="d"
-        Title="长丝/氨纶原料统计结果" Height="450" Width="800" Loaded="LoadData">
+        Title="长丝/氨纶原料统计结果" Height="720" Width="900" Loaded="LoadData">
     <Grid>
-        <DataGrid Name="Material_message" HorizontalAlignment="Left" AutoGenerateColumns="False">
+        <DataGrid Name="Changsi_message" HorizontalAlignment="Left" AutoGenerateColumns="False" Margin="0,0,0,120" CanUserAddRows="False" >
             <!--使header居中-->
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
@@ -23,5 +23,11 @@
                 <DataGridTextColumn Binding="{Binding Name}" Header="供货商" Width="*" FontSize="16" />
             </DataGrid.Columns>
         </DataGrid>
+        <Button x:Name="bnEdit_Copy" Content="导出" HorizontalAlignment="Left" Margin="250,630,0,0" VerticalAlignment="Top" 
+            Width="100" Height="30" Click="Button_Click"/>
+        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="550,630,0,0" VerticalAlignment="Top" 
+            Width="100" Height="30" Click="Button_Click"/>
+        <Label Content="重量合计：" HorizontalAlignment="Left" Margin="350,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Label Content="" Name="WeightContent" HorizontalAlignment="Left" Margin="450,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
     </Grid>
 </Window>

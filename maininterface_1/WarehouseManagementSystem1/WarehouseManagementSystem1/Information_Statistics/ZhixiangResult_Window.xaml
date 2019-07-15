@@ -5,9 +5,9 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Statistics"
         mc:Ignorable="d"
-        Title="纸箱信息统计结果" Height="450" Width="800" Loaded="LoadData">
+        Title="纸箱/纸管/塑料袋信息统计结果" Height="720" Width="900" Loaded="LoadData">
     <Grid>
-        <DataGrid Name="Material_message" HorizontalAlignment="Right" AutoGenerateColumns="False" Width="795.6">
+        <DataGrid Name="Zhixiang_message" HorizontalAlignment="Right" AutoGenerateColumns="False" Margin="0,0,0,120" CanUserAddRows="False" >
             <!--使header居中-->
             <DataGrid.ColumnHeaderStyle>
                 <Style TargetType="DataGridColumnHeader">
@@ -19,8 +19,17 @@
                 <DataGridTextColumn Binding="{Binding Type}" Header="类别" Width="*" FontSize="16"/>
                 <DataGridTextColumn Binding="{Binding Number}" Header="个数" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding UnitPrice}" Header="单价" Width="*" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Count}" Header="总价" Width="*" FontSize="16" />
                 <DataGridTextColumn Binding="{Binding Name}" Header="供货商" Width="*" FontSize="16" />
             </DataGrid.Columns>
         </DataGrid>
+        <Label Content="个数合计：" HorizontalAlignment="Left" Margin="220,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Label Content="" Name="NumbContent" HorizontalAlignment="Left" Margin="310,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Label Content="总价合计：" HorizontalAlignment="Left" Margin="520,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Label Content="" Name="ZongjiaContent" HorizontalAlignment="Left" Margin="610,580,0,0" VerticalAlignment="Top"  FontSize="18" FontWeight="Bold"/>
+        <Button x:Name="bnEdit_Copy" Content="导出" HorizontalAlignment="Left" Margin="250,630,0,0" VerticalAlignment="Top" 
+            Width="100" Height="30" Click="Button_Click"/>
+        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="550,630,0,0" VerticalAlignment="Top" 
+            Width="100" Height="30" Click="Button_Click"/>
     </Grid>
 </Window>

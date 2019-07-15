@@ -5,14 +5,21 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="产品信息查询" Height="400" Width="700">
+        Title="包纱信息查询" Height="450" Width="800">
     <Grid>
-        <Label Content="请输入要查询的产品信息" HorizontalAlignment="Left" Margin="197,10,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
-        <Label Content="请输入起始日期" HorizontalAlignment="Left" Margin="175,100,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="请输入终止日期" HorizontalAlignment="Left" Margin="175,170,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBox Name="tbStartTime" HorizontalAlignment="Left" Height="25" Margin="345,105,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontWeight="Bold"/>
-        <TextBox Name="tbEndTime" HorizontalAlignment="Left" Height="25" Margin="345,175,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="180" FontSize="20" FontWeight="Bold"/>
-        <Button Content="查询" HorizontalAlignment="Left" Margin="130,281,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="取消" HorizontalAlignment="Left" Margin="386,281,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Label Content="请输入要查询的包纱信息" HorizontalAlignment="Left" Margin="191,0,0,0" 
+               VerticalAlignment="Top" FontSize="35" FontWeight="Bold"/>
+        <Label Content="请输入起始日期" HorizontalAlignment="Left" Margin="175,110,0,0" FontSize="25" 
+               VerticalAlignment="Top" FontWeight="Bold"/>
+        <Label Content="请输入终止日期" HorizontalAlignment="Left" Margin="175,180,0,0" FontSize="25" 
+               VerticalAlignment="Top" FontWeight="Bold"/>
+        <TextBox Name="tbStartTime" HorizontalAlignment="Left" Height="35" Margin="360,115,0,0" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="25" FontWeight="Bold"/>
+        <TextBox Name="tbEndTime" HorizontalAlignment="Left" Height="35" Margin="360,185,0,0" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="25" FontWeight="Bold"/>
+        <Button Content="查询" HorizontalAlignment="Left" Margin="130,285,0,0" Width="200" Height="60" 
+                VerticalAlignment="Top" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="470,285,0,0" Width="200" Height="60" 
+                VerticalAlignment="Top" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Window>

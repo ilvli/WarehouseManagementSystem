@@ -1,6 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Data;
 using System.Data.SQLite;
 using System.Linq;
 using System.Text;
@@ -22,12 +23,16 @@ namespace WarehouseManagementSystem1.Information_Statistics
     public partial class ZhixiangResult_Window : Window
     {
         ObservableCollection<ZhixiangMessage> ZhixiangData = new ObservableCollection<ZhixiangMessage>();
-        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\QinShan.sqlite");
+        WarehouseManagementSystem1.ExportExcel ExportExcel = new ExportExcel();
 
         public string DataStart { get; set; }
         public string DataEnd { get; set; }
         public string TypeR { get; set; }
         public string Sipplier { get; set; }
+        public int RowCount = 0;
+        public int NumSum = 0;
+        public double ZhongjiaSum = 0;
 
         public ZhixiangResult_Window()
         {
@@ -49,6 +54,7 @@ namespace WarehouseManagementSystem1.Information_Statistics
             SQLiteDataReader reader = command.ExecuteReader();
             while (reader.Read())
             {
+                RowCount += 1;
                 ZhixiangData.Add(new ZhixiangMessage()
                 {
                     Type = reader["Type"].ToString(),
@@ -56,17 +62,29 @@ namespace WarehouseManagementSystem1.Information_Statistics
                     Number = reader["Number"].ToString(),
                     UnitPrice = reader["Price"].ToString(),
                     Name = reader["Merchant"].ToString(),
-                });
+                    Count = Convert.ToDouble(reader["Number"].ToString()) * Convert.ToDouble(reader["Price"].ToString())
+                }) ;
+                NumSum += Convert.ToInt32(reader["Number"]);
+                ZhongjiaSum += Convert.ToDouble(reader["Number"].ToString()) * Convert.ToDouble(reader["Price"].ToString());
             }
-            Material_message.ItemsSource = ZhixiangData;
+            Zhixiang_message.ItemsSource = ZhixiangData;
+            NumbContent.Content = NumSum.ToString();
+            ZongjiaContent.Content = ZhongjiaSum.ToString();
         }
-    }
-    public class ZhixiangMessage
-    {
-        public string Data { get; set; }//收货日期
-        public string Type { get; set; }//只有长丝/氨纶两种
-        public string Number { get; set; }//个数
-        public string UnitPrice { get; set; }   //单价
-        public string Name { get; set; }//供货商家
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Button btn = sender as Button;
+            switch (btn.Content.ToString())
+            {
+                case "返回":
+                    DBConnection2.Close();
+                    this.Close();
+                    break;
+                case "导出":
+                    ExportExcel.ExportZhixiang(Zhixiang_message, "纸箱纸管塑料袋账单", RowCount, ZhixiangData, 0);
+                    break;
+            }
+        }
     }
 }

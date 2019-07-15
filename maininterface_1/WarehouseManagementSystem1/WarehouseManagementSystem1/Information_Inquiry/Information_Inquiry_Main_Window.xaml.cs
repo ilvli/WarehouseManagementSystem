@@ -28,16 +28,20 @@ namespace WarehouseManagementSystem1.Information_Inquiry
         {
             Button btn = sender as Button;
             Window w = null;
+            //按下对应的键时打开对应的窗口
             switch (btn.Content.ToString())
             {
                 case "原料查询":
                     w = new Material_Type_Window();
                     break;
-                case "产品查询":
+                case "包纱查询":
                     w = new Product_Information_Inquiry();
                     break;
                 case "商家查询":
                     w = new Merchant_Inquiry();
+                    break;
+                case "型号和颜色":
+                    w = new ModelAndColor_Inquiry_Window();
                     break;
                 case "返回": this.Close(); break;
             }
@@ -49,6 +53,7 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             }
         }
     }
+    //用于保存下拉栏信息的类
     public class ComboBoxValue
     {
         public string Name { get; set; }

@@ -28,6 +28,7 @@ namespace WarehouseManagementSystem1.Information_Inquiry
         {
             Button btn = sender as Button;
             Window w = null;
+            //按下对应键时打开对应的窗口
             switch (btn.Content.ToString())
             {
                 case "返回": this.Close(); break;
@@ -42,9 +43,12 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             }
         }
     }
+    //用于保存商家信息的类
     public class MerchantMessage
     {
+        public string Number { get; set; }
         public string Name { get; set; }
         public string Remark { get; set; }
+        public string Type { get; set; }
     }
 }

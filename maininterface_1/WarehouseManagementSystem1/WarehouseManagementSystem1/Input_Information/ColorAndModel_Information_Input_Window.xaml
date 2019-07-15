@@ -1,0 +1,15 @@
+﻿<Window x:Class="WarehouseManagementSystem1.Input_Information.ColorAndModel_Information_Input_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseManagementSystem1.Input_Information"
+        mc:Ignorable="d"
+        Title="型号和颜色信息录入" Height="450" Width="800">
+    <Grid>
+        <Label Content="请选择要录入的信息类别" HorizontalAlignment="Left" Margin="206,0,0,0" VerticalAlignment="Top" FontSize="35" FontWeight="Bold"/>
+        <Button Content="颜色" HorizontalAlignment="Left" Margin="300,104,0,0" VerticalAlignment="Top" Width="200" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="型号" HorizontalAlignment="Left" Margin="300,194,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.584,2.338" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="300,284,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.584,2.338" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+    </Grid>
+</Window>

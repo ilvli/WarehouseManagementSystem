@@ -5,23 +5,38 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Input_Information"
         mc:Ignorable="d"
-        Title="产品信息录入" Height="550" Width="700" Loaded="LoadData">
+        Title="包纱信息录入" Height="610" Width="800" Loaded="LoadData">
     <Grid>
-        <Label Content="发货状态" HorizontalAlignment="Left" Margin="170,45,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="发货日期" HorizontalAlignment="Left" Margin="170,95,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="颜色" HorizontalAlignment="Left" Margin="185,145,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="型号" HorizontalAlignment="Left" Margin="185,195,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="重量" HorizontalAlignment="Left" Margin="185,245,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="箱数" HorizontalAlignment="Left" Margin="185,295,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <Label Content="收货商家" HorizontalAlignment="Left" Margin="170,345,0,0" VerticalAlignment="Top" FontSize="20" FontWeight="Bold"/>
-        <TextBox Name="tbTime" HorizontalAlignment="Left" Height="27" Margin="280,99,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox Name="tbColor" HorizontalAlignment="Left" Height="27" Margin="280,150,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox Name="tbModel" HorizontalAlignment="Left" Height="27" Margin="280,200,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox Name="tbWeight" HorizontalAlignment="Left" Height="27" Margin="280,250,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <TextBox Name="tbNumber" HorizontalAlignment="Left" Height="27" Margin="280,300,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <ComboBox Name="IsSendingCombo" HorizontalAlignment="Left" Margin="280,50,0,0" VerticalAlignment="Top" Width="250" FontSize="16" SelectionChanged="IsSendingCombo_SelectionChanged"/>
-        <ComboBox Name="SupplierCombo" HorizontalAlignment="Left" Margin="280,350,0,0" VerticalAlignment="Top" Width="250" FontSize="16"/>
-        <Button Content="确定" HorizontalAlignment="Left" Margin="120,430,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Click="Button_Click" Height="35"/>
-        <Button Content="取消" HorizontalAlignment="Left" Margin="400,430,0,0" VerticalAlignment="Top" Width="200" FontSize="20" FontWeight="Bold" Click="Button_Click" Height="35"/>
+        <Label Content="发货状态" HorizontalAlignment="Left" Margin="210,45,0,0" VerticalAlignment="Top" 
+               FontSize="25" FontWeight="Bold"/>
+        <Label Content="收货商家" HorizontalAlignment="Left" Margin="210,105,0,0" VerticalAlignment="Top" 
+               FontSize="25" FontWeight="Bold"/>
+        <Label Content="型号" HorizontalAlignment="Left" Margin="234,165,0,0" VerticalAlignment="Top" 
+               FontSize="25" FontWeight="Bold"/>
+        <Label Content="颜色" HorizontalAlignment="Left" Margin="234,225,0,0" VerticalAlignment="Top" 
+               FontSize="25" FontWeight="Bold"/>
+        <Label Content="发货日期" HorizontalAlignment="Left" Margin="210,285,0,0" VerticalAlignment="Top" 
+               FontSize="25" FontWeight="Bold"/>
+        <Label Content="重量" HorizontalAlignment="Left" Margin="234,345,0,0" VerticalAlignment="Top" 
+               FontSize="25" FontWeight="Bold"/>
+        <Label Content="箱数" HorizontalAlignment="Left" Margin="234,405,0,0" VerticalAlignment="Top" 
+               FontSize="25" FontWeight="Bold"/>
+        <ComboBox Name="IsSendingCombo" HorizontalAlignment="Left" Margin="322,50,0,0" VerticalAlignment="Top"
+                  Width="250" FontSize="25" SelectionChanged="IsSendingCombo_SelectionChanged"/>
+        <ComboBox Name="ReceicingMerchantCombo" HorizontalAlignment="Left" Margin="322,110,0,0" VerticalAlignment="Top"
+                  Width="250" FontSize="25" SelectionChanged="ReceicingMerchantCombo_SelectionChanged"/>
+        <ComboBox x:Name="ModelCombo" HorizontalAlignment="Left" Margin="322,170,0,0" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <ComboBox x:Name="ColorCombo" HorizontalAlignment="Left" Margin="322,230,0,0" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <TextBox Name="tbTime" HorizontalAlignment="Left" Height="35" Margin="322,290,0,0" 
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <TextBox Name="tbWeight" HorizontalAlignment="Left" Height="35" Margin="322,350,0,0"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <TextBox Name="tbNumber" HorizontalAlignment="Left" Height="35" Margin="322,410,0,0"
+                 TextWrapping="Wrap" VerticalAlignment="Top" Width="250" FontSize="25"/>
+        <Button Content="确定" HorizontalAlignment="Left" Margin="150,479,0,0" VerticalAlignment="Top" 
+                Width="200" FontSize="25" FontWeight="Bold" Click="Button_Click" Height="60"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="450,479,0,0" VerticalAlignment="Top" 
+                Width="200" FontSize="25" FontWeight="Bold" Click="Button_Click" Height="60"/>
+
     </Grid>
 </Window>

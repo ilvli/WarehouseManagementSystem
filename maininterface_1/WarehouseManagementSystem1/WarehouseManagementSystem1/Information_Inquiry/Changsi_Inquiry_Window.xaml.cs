@@ -33,6 +33,7 @@ namespace WarehouseManagementSystem1.Information_Inquiry
         }
         private void LoadData(object sender, RoutedEventArgs e)
         {
+            //添加类别下拉栏的选项
             TypeBoxValue.Add(new ComboBoxValue()
             {
                 Name = "长丝",
@@ -55,10 +56,11 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             Button btn = sender as Button;
             switch (btn.Content.ToString())
             {
-                case "取消":
+                case "返回":
                     this.Close();
                     break;
                 case "查询":
+                    //当按下查询按键时，将输入信息传递给长丝/氨纶查询结果窗口，并现实窗口
                     ChangsiResult_Window Result = new ChangsiResult_Window
                     {
                         DataStart = tbStartData.Text,
@@ -69,12 +71,6 @@ namespace WarehouseManagementSystem1.Information_Inquiry
                     Result.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
                     break;
             }
-            //if (w != null)
-            //{
-            //    w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
-            //    w.Owner = this;
-            //    w.ShowDialog();
-            //}
         }
     }
 }

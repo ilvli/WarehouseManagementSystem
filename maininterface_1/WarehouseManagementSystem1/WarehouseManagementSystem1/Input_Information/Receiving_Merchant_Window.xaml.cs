@@ -21,7 +21,7 @@ namespace WarehouseManagementSystem1.Input_Information
     public partial class Receiving_Merchant_Window : Window
     {
         WarehouseManagementSystem1.Sqlite_Operate_Function sqlite_Operate = new Sqlite_Operate_Function();
-        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+        SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\QinShan.sqlite");
         public Receiving_Merchant_Window()
         {
             InitializeComponent();
@@ -39,7 +39,8 @@ namespace WarehouseManagementSystem1.Input_Information
                     MessageBox.Show("保存成功！", "提醒", MessageBoxButton.OK);
                     this.Close();
                     break;
-                case "取消":
+                case "返回":
+                    DBConnection2.Close();
                     this.Close();
                     break;
             }

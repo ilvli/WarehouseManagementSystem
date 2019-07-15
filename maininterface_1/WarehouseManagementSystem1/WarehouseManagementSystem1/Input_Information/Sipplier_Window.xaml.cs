@@ -23,14 +23,11 @@ namespace WarehouseManagementSystem1.Input_Information
     {
         //创建操作对象
         WarehouseManagementSystem1.Sqlite_Operate_Function sqlite_Operate = new Sqlite_Operate_Function();
-        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\QinShan.sqlite");
 
         public Sipplier_Window()
         {
             InitializeComponent();
-            //sqlite_Operate.ConnectToDatabase(DBConnection2,"test1");
-            //DBConnection2 = new SQLiteConnection("C:\\ProgramData\\QinShan\\test1.sqlite");
-            //连接数据库
             DBConnection2.Open();
         }
 
@@ -51,7 +48,9 @@ namespace WarehouseManagementSystem1.Input_Information
                     MessageBox.Show("保存成功！", "提醒", MessageBoxButton.OK);
                     this.Close();
                     break;
-                case "取消": this.Close(); break;
+                case "返回":
+                    DBConnection2.Close();
+                    this.Close(); break;
             }
             if (w != null)
             {

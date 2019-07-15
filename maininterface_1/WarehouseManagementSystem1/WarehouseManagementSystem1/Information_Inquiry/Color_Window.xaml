@@ -1,0 +1,27 @@
+﻿<Window x:Class="WarehouseManagementSystem1.Information_Inquiry.Color_Window"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
+        mc:Ignorable="d"
+        Title="颜色信息查询" Height="700" Width="850" Loaded="LoadData">
+    <Grid>
+        <DataGrid Name="Color_message" HorizontalAlignment="Left" AutoGenerateColumns="False" Margin="0,0,0,80" CanUserAddRows="False" BeginningEdit="Color_message_BeginningEdit"  CellEditEnding="Color_message_CellEditEnding">
+            <!--使header居中-->
+            <DataGrid.ColumnHeaderStyle>
+                <Style TargetType="DataGridColumnHeader">
+                    <Setter Property="HorizontalContentAlignment" Value="Center"/>
+                </Style>
+            </DataGrid.ColumnHeaderStyle>
+            <DataGrid.Columns>
+                <DataGridTextColumn Binding="{Binding Number}" Header="序号" Width="40" FontSize="16" />
+                <DataGridTextColumn Binding="{Binding Message}" Header="颜色" Width="*" FontSize="16"/>
+            </DataGrid.Columns>
+        </DataGrid>
+        <Button Name="bnEdit" Content="编辑" HorizontalAlignment="Left" Margin="100,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnSave" Content="退出编辑" HorizontalAlignment="Left" Margin="280,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button Name="bnDelete" Content="删除" HorizontalAlignment="Left" Margin="460,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+        <Button x:Name="bnquit" Content="返回" HorizontalAlignment="Left" Margin="640,615,0,0" VerticalAlignment="Top" Width="100" Height="30" Click="Button_Click"/>
+    </Grid>
+</Window>

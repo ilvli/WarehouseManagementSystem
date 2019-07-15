@@ -24,7 +24,7 @@ namespace WarehouseManagementSystem1.Information_Statistics
         //存储种类和供货商信息
         ObservableCollection<ComboBoxValue> TypeBoxValue = new ObservableCollection<ComboBoxValue>();
         ObservableCollection<ComboBoxValue> SiplierBoxValue = new ObservableCollection<ComboBoxValue>();
-        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\test1.sqlite");
+        private SQLiteConnection DBConnection2 = new SQLiteConnection("Data Source=C:\\ProgramData\\QinShan\\QinShan.sqlite");
 
         public ZhiXiang_Window()
         {
@@ -91,7 +91,7 @@ namespace WarehouseManagementSystem1.Information_Statistics
                     Result.ShowDialog();
                     Result.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
                     break;
-                case "取消": this.Close(); break;
+                case "返回": this.Close(); break;
             }
         }
     }

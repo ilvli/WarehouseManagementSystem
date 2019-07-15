@@ -5,11 +5,15 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WarehouseManagementSystem1.Information_Inquiry"
         mc:Ignorable="d"
-        Title="原料信息查询" Height="400" Width="700">
+        Title="原料信息查询" Height="450" Width="800">
     <Grid>
-        <Label Content="选择要查询的原料类别" HorizontalAlignment="Left" Margin="220,10,0,0" VerticalAlignment="Top" FontSize="25" FontWeight="Bold"/>
-        <Button Content="长丝/氨纶" HorizontalAlignment="Left" Margin="250,90,0,0" VerticalAlignment="Top" Width="200" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="纸箱/纸管/塑料袋" HorizontalAlignment="Left" Margin="250,170,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.584,2.338" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
-        <Button Content="返回" HorizontalAlignment="Left" Margin="250,250,0,0" VerticalAlignment="Top" Width="200" RenderTransformOrigin="0.584,2.338" Height="40" FontSize="20" FontWeight="Bold" Click="Button_Click"/>
+        <Label Content="选择要查询的原料类别" HorizontalAlignment="Left" Margin="220,0,0,0" VerticalAlignment="Top" 
+               FontSize="35" FontWeight="Bold"/>
+        <Button Content="长丝/氨纶" HorizontalAlignment="Left" Margin="300,100,0,0" VerticalAlignment="Top" Width="200" 
+                Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="纸箱/纸管/塑料袋" HorizontalAlignment="Left" Margin="300,190,0,0" VerticalAlignment="Top" Width="200" 
+                RenderTransformOrigin="0.584,2.338" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
+        <Button Content="返回" HorizontalAlignment="Left" Margin="300,280,0,0" VerticalAlignment="Top" Width="200" 
+                RenderTransformOrigin="0.584,2.338" Height="60" FontSize="25" FontWeight="Bold" Click="Button_Click"/>
     </Grid>
 </Window>

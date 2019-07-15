@@ -32,15 +32,18 @@ namespace WarehouseManagementSystem1.Input_Information
             switch (btn.Content.ToString())
             {
                 case "原料": w = new Material_Information_Input_Window(); break;
-                case "产品": w = new Product_Information_Input_Window(); break;
+                case "包纱": w = new Product_Information_Input_Window(); break;
                 case "商家": w = new Merchant_Information_Input_Window(); break;
+                case "型号和颜色": w = new ColorAndModel_Information_Input_Window(); break;
                 case "返回": this.Close(); break;
             }
             if (w != null)
             {
+                this.Hide();
                 w.WindowStartupLocation = System.Windows.WindowStartupLocation.CenterOwner;
                 w.Owner = this;
                 w.ShowDialog();
+                this.ShowDialog();
             }
         }
     }

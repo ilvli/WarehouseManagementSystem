@@ -29,8 +29,9 @@ namespace WarehouseManagementSystem1.Information_Inquiry
             Button btn = sender as Button;
             switch (btn.Content.ToString())
             {
-                case "取消": this.Close(); break;
+                case "返回": this.Close(); break;
                 case "查询":
+                    //当按下查询按键时，将查询的条件传递给查询结果窗口，并将窗口显示出来
                     Product_result Result = new Product_result
                     {
                         DataStart = tbStartTime.Text,
